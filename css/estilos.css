@@ -1,0 +1,715 @@
+/*Variables*/
+/**/
+/*Variables*/
+/**/
+/*COLORES*/
+/*FUENTES*/
+/*DARK MODE SWITCH*/
+.disclaimer {
+  visibility: hidden;
+}
+/*GENERAL*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  color: #303133;
+}
+.container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #303133;
+  transition: all .3s ease;
+}
+a:hover {
+  color: rgba(48, 49, 51, 0.5);
+}
+.titulo-seccion h2 {
+  font-size: 3.125rem;
+  font-weight: 400;
+  line-height: 3.6875rem;
+  margin-bottom: 1.125rem;
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+.titulo-seccion p {
+  font-size: 1.25rem;
+  color: #777;
+}
+.imagen-modal {
+  width: 90%;
+  max-width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity .5s ease;
+}
+.imagen-modal + i {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  color: #ffffff;
+  font-size: 2.25rem;
+  display: inline-block;
+  padding: 0.75rem 0.875rem;
+  cursor: pointer;
+}
+/*MODO OSCURO*/
+.toggle-switch {
+  z-index: 100;
+  position: fixed;
+  width: 4rem;
+  padding: 0;
+  right: 0.75rem;
+  top: 7rem;
+}
+.toggle-switch label {
+  position: absolute;
+  width: 100%;
+  height: 1.8rem;
+  background-color: #d8dbe0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.toggle-switch input {
+  position: absolute;
+  display: none;
+}
+.toggle-switch .slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.toggle-switch input:checked ~ .slider {
+  background-color: #28292c;
+}
+.toggle-switch .slider::before {
+  content: "";
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  box-shadow: none;
+  background-color: #28292c;
+  transition: 0.3s;
+}
+.toggle-switch input:checked ~ .slider::before {
+  transform: translatex(2.2rem);
+  background-color: #28292c;
+  box-shadow: inset 0.5rem -0.02rem 0 0 #d8dbe0;
+}
+/*ENCABEZADO*/
+header .menu-bar-pc {
+  background: #ffffff;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  padding: 0 2.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfdfde;
+  min-height: 5.875rem;
+}
+header .menu-bar-pc.darkmode {
+  background: #28292c;
+}
+header .menu-bar-pc.darkmode a {
+  color: white;
+}
+header .menu-bar-pc .logo {
+  max-width: 10rem ;
+}
+header .menu-bar-pc .menu-principal a {
+  padding: 0 0.5625rem;
+}
+header .menu-bar-pc .top-redes a {
+  padding: 0 0.5625rem;
+}
+header .menu-bar-movil {
+  background: #ffffff;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  padding: 0 2.25rem;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfdfde;
+  min-height: 5.875rem;
+}
+header .menu-bar-movil.darkmode {
+  background: #28292c;
+}
+header .menu-bar-movil.darkmode a {
+  color: white;
+}
+header .menu-bar-movil.darkmode .slideMenu {
+  background: #28292c;
+}
+header .menu-bar-movil.darkmode .slideMenu a {
+  color: white;
+}
+header .menu-bar-movil .logo {
+  max-width: 10rem ;
+}
+header .menu-bar-movil .burger-menu {
+  cursor: pointer;
+  font-size: 2.1875rem;
+}
+header .menu-bar-movil .slideMenu {
+  position: fixed;
+  top: 5.875rem;
+  left: -80%;
+  background: #ffffff;
+  text-align: center;
+  padding: 1.25rem 2.25rem;
+  width: 80%;
+  transition: all .3s ease;
+}
+header .menu-bar-movil .slideMenu.active {
+  left: 0;
+}
+header .menu-bar-movil .slideMenu .top-redes {
+  margin-bottom: 0.625rem;
+}
+header .menu-bar-movil .slideMenu .top-redes a {
+  padding: 0 0.5625rem;
+}
+header .menu-bar-movil .slideMenu .menu-principal a {
+  display: block;
+  padding: 0.625rem 0;
+  border-top: 1px solid #dfdfde;
+}
+/*MAIN*/
+.main {
+  margin-top: 5.875rem;
+  /*portada*/
+
+  /*Nosotros*/
+
+  /*Juegos*/
+
+  /*Panaservers*/
+
+  /*DJPANAS*/
+
+  /*Contacto*/
+
+}
+.main .portada {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.main .portada .col {
+  width: 50%;
+  background: #141618;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .portada .col .foto {
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+.main .portada .col .foto.izq {
+  background-image: url("../img/FOTO_4.jpg");
+  background-position: left;
+}
+.main .portada .col .foto.der {
+  background-image: url("../img/FOTO_2.jpg");
+  opacity: 0.8;
+}
+.main .portada .col .foto .overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 22, 24, 0.4);
+  position: relative;
+  cursor: pointer;
+  -transition: all .3s ease;
+}
+.main .portada .col .foto .overlay:hover {
+  opacity: 1;
+}
+.main .portada .col .foto .overlay i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5625rem;
+}
+.main .portada .col .texto {
+  width: 50%;
+  padding: 3.375rem;
+}
+.main .portada .col .texto h2 {
+  font-size: 1.8125rem;
+  font-weight: 400;
+  line-height: 2.6875rem;
+  margin-bottom: 1.125rem;
+}
+.main .portada .col .texto p {
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+}
+.main .portada .col .foto-full {
+  width: 100%;
+  min-height: 15.25rem;
+  background-size: cover;
+  background-position: center;
+}
+.main .portada .col .foto-full.izq {
+  background-image: url("../img/FOTO_3.png");
+  opacity: 0.8;
+}
+.main .portada .col .foto-full.der {
+  background-image: url("../img/FOTO_1.png");
+}
+.main .portada .col .foto-full .overlay {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 22, 24, 0.4);
+  position: relative;
+  cursor: pointer;
+  -transition: all .3s ease;
+}
+.main .portada .col .foto-full .overlay:hover {
+  opacity: 1;
+}
+.main .portada .col .foto-full .overlay i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5625rem;
+}
+.main .nosotros {
+  padding: 5.626rem 0;
+}
+.main .nosotros .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.main .nosotros .container .col.izq {
+  width: 30%;
+  border-right: 1px solid #dfdfde;
+  display: flex;
+  align-items: center;
+  padding-right: 5%;
+}
+.main .nosotros .container .col.der {
+  width: 70%;
+  padding-left: 5%;
+}
+.main .nosotros .container .col.der .texto p {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #777777;
+}
+.main .juegos {
+  background: #141618;
+  padding: 5.626rem 0;
+}
+.main .juegos .container {
+  display: flex;
+  align-items: center;
+}
+.main .juegos .container .col {
+  width: 35%;
+}
+.main .juegos .container .col.izq {
+  width: 65%;
+  box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.main .juegos .container .col .titulo-seccion {
+  padding: 3.125rem ;
+  padding-right: 0;
+  text-align: center;
+}
+.main .juegos .container .col .titulo-seccion h2 {
+  color: #ffffff;
+}
+.main .juegos .container .col .titulo-seccion p {
+  color: rgba(255, 255, 255, 0.6);
+  padding-bottom: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1.175;
+}
+.main .juegos .container .col .titulo-seccion p:last-child {
+  padding-bottom: 0;
+}
+.main .juegos .container .col .slider {
+  width: 700%;
+  display: flex;
+}
+.main .juegos .container .col .slider .slide {
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+.main .juegos .container .col .slider .slide.juego1 {
+  background-image: url("../img/juego_1.png");
+}
+.main .juegos .container .col .slider .slide.juego2 {
+  background-image: url("../img/juego_2.png");
+}
+.main .juegos .container .col .slider .slide.juego3 {
+  background-image: url("../img/juego_3.png");
+}
+.main .juegos .container .col .slider .slide.juego4 {
+  background-image: url("../img/juego_4.png");
+}
+.main .juegos .container .col .slider .slide.juego5 {
+  background-image: url("../img/juego_5.png");
+}
+.main .juegos .container .col .slider .slide.juego6 {
+  background-image: url("../img/juego_6.png");
+}
+.main .juegos .container .col .slider .slide.juego7 {
+  background-image: url("../img/juego_7.png");
+}
+.main .panaserver {
+  padding: 5.625rem 0;
+}
+.main .panaserver .container .titulo-seccion h2 {
+  text-align: center;
+}
+.main .panaserver .container .container-menu {
+  margin-top: 2.5rem;
+}
+.main .panaserver .container .container-menu .encabezado {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: upppercase;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.main .panaserver .container .container-menu .encabezado li a {
+  font-size: 1.25rem;
+  padding: 0 1.4375rem 1.125rem 1.4375rem;
+  display: block;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-bottom: 2px solid transparent;
+}
+.main .panaserver .container .container-menu .encabezado li a:hover {
+  color: #8b0000;
+}
+.main .panaserver .container .container-menu .encabezado li.active a {
+  color: #8b0000;
+  border-bottom: 3px solid #8b0000;
+}
+.main .panaserver .container .container-menu .contenido {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  border: 6px double #dfdfde;
+  padding: 0 2.25rem;
+}
+.main .panaserver .container .container-menu .contenido > div {
+  display: none;
+  transition: all .3s ease ;
+}
+.main .panaserver .container .container-menu .contenido .active {
+  display: block;
+}
+.main .panaserver .container .container-menu .contenido .item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2.25rem 0;
+  border-bottom: 1px solid #dfdfde;
+}
+.main .panaserver .container .container-menu .contenido .item .col.izq {
+  width: 55%;
+}
+.main .panaserver .container .container-menu .contenido .item .col.izq h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+}
+.main .panaserver .container .container-menu .contenido .item .col.izq p {
+  font-size: 1rem;
+  color: #777;
+}
+.main .panaserver .container .container-menu .contenido .item .col.der {
+  width: 45%;
+  text-align: center;
+  font-size: 1.25rem;
+}
+.main .djpanas {
+  padding: 5.625rem 0;
+}
+.main .djpanas .container .titulo-seccion h2 {
+  text-align: center;
+  padding: 2rem;
+}
+.main .contacto .datos {
+  padding: 5.625rem 0 11.875rem 0;
+  position: relative;
+  background-image: url("../img/FONDO_PARALLAX_1.jpg");
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+.main .contacto .datos.darkmode {
+  background-image: url("../img/FONDO_PARALLAX_2.jpg");
+}
+.main .contacto .datos .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 22, 24, 0.3);
+  top: 0;
+  z-index: 1;
+}
+.main .contacto .datos .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main .contacto .datos .blurb {
+  background: #ffffff;
+  border: 6px double #dfdfde;
+  padding: 2.25rem;
+  text-align: center;
+  width: 25%;
+}
+.main .contacto .datos h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.6875rem;
+  margin-bottom: 1.125rem;
+  border-bottom: 1px solid #dfdfde;
+}
+.main .contacto .datos p {
+  font-size: 1rem;
+  color: #777;
+}
+.main .contacto .formulario {
+  position: relative;
+  z-index: 3;
+  background: #ffffff;
+  max-width: 40.625rem;
+  margin: 0 auto;
+  padding: 2.25rem;
+  margin-top: -6.25rem;
+  width: 90%;
+}
+.main .contacto .formulario .formulario_contacto .input-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.main .contacto .formulario .formulario_contacto .input-group input[type="text"],
+.main .contacto .formulario .formulario_contacto .input-group input[type="email"],
+.main .contacto .formulario .formulario_contacto .input-group textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #303133;
+  width: 100%;
+  outline: none;
+  padding: 0.9375rem 0;
+  background: none;
+  border: none;
+  vertical-align: top;
+  border-bottom: 2px solid rgba(139, 0, 0, 0.5);
+}
+.main .contacto .formulario .formulario_contacto .input-group input[type="text"]:focus,
+.main .contacto .formulario .formulario_contacto .input-group input[type="email"]:focus,
+.main .contacto .formulario .formulario_contacto .input-group textarea:focus {
+  border-bottom: 2px solid #8b0000;
+}
+.main .contacto .formulario .formulario_contacto .input-group textarea {
+  max-width: 100%;
+  max-height: 10.25rem;
+  min-height: 5.125rem;
+  min-width: 100%;
+}
+.main .contacto .formulario .formulario_contacto .input-group label {
+  color: #777777;
+  font-family: 'Poppins', sans-serif;
+}
+.main .contacto .formulario .formulario_contacto .input-group label.label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-left: 1rem;
+  transition: all .3s ease;
+}
+.main .contacto .formulario .formulario_contacto .input-group label.label.active {
+  top: -0.25rem;
+  margin-left: 0;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: #777777;
+}
+.main .contacto .formulario .formulario_contacto .input-group .error {
+  position: absolute;
+  color: #ff3b3b;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+}
+.main .contacto .formulario .formulario_contacto input[type="submit"] {
+  font-family: 'Poppins', sans-serif;
+  background: #8b0000;
+  color: #ffffff;
+  border-radius: 1px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3.125rem;
+  padding: 0.9375rem;
+  width: 20%;
+  outline: none;
+  transition: all .3s ease;
+}
+.main .contacto .formulario .formulario_contacto input[type="submit"]:hover {
+  background: #720000;
+}
+/*FOOTER*/
+footer {
+  margin-top: 2.25rem;
+  background: black;
+  padding: 5.625rem 0;
+  text-align: center;
+  color: #ffffff;
+}
+footer .bottom-redes {
+  margin-top: 2.25rem;
+}
+footer .bottom-redes a {
+  padding: 0 0.5625rem;
+  color: #ffffff;
+  transition: all .3s ease;
+}
+footer .bottom-redes a:hover {
+  color: red;
+}
+/*MEDIA QUERYS*/
+@media all and (max-width: 1500px) {
+  .main .portada .texto {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+@media all and (max-width: 1199px) {
+  .main .portada .col .foto {
+    display: none;
+  }
+  .main .portada .col .texto {
+    width: 100%;
+  }
+}
+@media all and (max-width: 980px) {
+  .main .nosotros .container .col.izq {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #dfdfde;
+    text-align: center;
+    display: block;
+    padding: 0;
+    margin-bottom: 2.25rem;
+  }
+  .main .nosotros .container .col.der {
+    width: 100%;
+    padding: 0;
+    text-align: justify;
+  }
+  .main .contacto .datos .container .blurb {
+    width: 100%;
+    max-width: 40.625rem;
+    margin-bottom: 2.25rem;
+    margin: 0 auto;
+  }
+  .main .contacto .datos .container .blurb:last-child {
+    margin-bottom: 0;
+  }
+  .main .juegos .container {
+    display: block;
+  }
+  .main .juegos .container .col {
+    width: 100%;
+  }
+  .main .juegos .container .col.izq {
+    width: 100%;
+  }
+  .main .juegos .container .col .titulo-seccion {
+    padding: 0;
+  }
+}
+@media all and (max-width: 800px) {
+  header .menu-bar-pc {
+    display: none;
+  }
+  header .menu-bar-movil {
+    display: flex;
+  }
+  .main .portada .col {
+    width: 100%;
+  }
+  .main .portada .col .foto-full.izq {
+    display: none;
+  }
+  .main .portada .col .texto h2 {
+    text-align: center;
+  }
+  .main .portada .col .texto p {
+    text-align: justify;
+  }
+}
+@media all and (max-width: 580px) {
+  .titulo-seccion h2 {
+    font-size: 2.5rem;
+  }
+  .main .nosotros .container .col.der .texto p {
+    font-size: 1rem;
+  }
+  .main .panaserver .container .container-menu .contenido .item .col.izq {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.625rem;
+  }
+  .main .panaserver .container .container-menu .contenido .item .col.der {
+    width: 100%;
+  }
+  .main .contacto .formulario .formulario_contacto input[type="submit"] {
+    width: 100%;
+  }
+}
