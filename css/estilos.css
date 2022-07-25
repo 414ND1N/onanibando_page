@@ -378,25 +378,25 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   background-position: center;
 }
 .main .juegos .container .col .slider .slide.juego1 {
-  background-image: url("../img/juego_1.png");
+  background-image: url("../img/juegos/juego_1.png");
 }
 .main .juegos .container .col .slider .slide.juego2 {
-  background-image: url("../img/juego_2.png");
+  background-image: url("../img/juegos/juego_2.png");
 }
 .main .juegos .container .col .slider .slide.juego3 {
-  background-image: url("../img/juego_3.png");
+  background-image: url("../img/juegos/juego_3.png");
 }
 .main .juegos .container .col .slider .slide.juego4 {
-  background-image: url("../img/juego_4.png");
+  background-image: url("../img/juegos/juego_4.png");
 }
 .main .juegos .container .col .slider .slide.juego5 {
-  background-image: url("../img/juego_5.png");
+  background-image: url("../img/juegos/juego_5.png");
 }
 .main .juegos .container .col .slider .slide.juego6 {
-  background-image: url("../img/juego_6.png");
+  background-image: url("../img/juegos/juego_6.png");
 }
 .main .juegos .container .col .slider .slide.juego7 {
-  background-image: url("../img/juego_7.png");
+  background-image: url("../img/juegos/juego_7.png");
 }
 .main .panaserver {
   padding: 5.625rem 0;
