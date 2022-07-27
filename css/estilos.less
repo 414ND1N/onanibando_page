@@ -572,10 +572,31 @@ header{
 	/*DJPANAS*/
 
 	.djpanas{
-		padding: 5.625rem 0;
-		.container .titulo-seccion h2{
+		padding: 3.625rem 0;
+		.container{
 			text-align: center;
-			padding: 2rem;
+			justify-content: center;
+
+			.titulo-seccion h2{
+				
+				padding-bottom: 2rem;
+			}
+			.youtubePlayer{
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				iframe{
+					width: 32rem;
+					height: 18rem;
+					
+					&:hover{
+						animation-name: hoverPop;
+						animation-duration: .4s;
+					}
+				}
+				
+				
+			}
 		}
 	}
 	/*Contacto*/
@@ -739,7 +760,20 @@ footer{
 		}
 	}
 }
+/*KEYFRAMES*/
 
+@keyframes hoverPop {
+	0%, 100% {
+	  transform: scale(1);
+	}
+	33% {
+	  transform: scale(1.02);
+	}
+	66% {
+	  transform: scale(.95);
+	}
+  }
+  
 /*MEDIA QUERYS*/
 
 @media all and (max-width: 1500px){
@@ -855,5 +889,9 @@ footer{
 	}
 	.main .contacto .formulario .formulario_contacto input[type="submit"]{
 		width: 100%;
+	}
+	.main .djpanas .container .youtubePlayer iframe{
+		width: 27.2rem;
+		height: 15.3rem;
 	}
 }

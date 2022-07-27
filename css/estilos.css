@@ -474,11 +474,27 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   font-size: 1.25rem;
 }
 .main .djpanas {
-  padding: 5.625rem 0;
+  padding: 3.625rem 0;
+}
+.main .djpanas .container {
+  text-align: center;
+  justify-content: center;
 }
 .main .djpanas .container .titulo-seccion h2 {
-  text-align: center;
-  padding: 2rem;
+  padding-bottom: 2rem;
+}
+.main .djpanas .container .youtubePlayer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.main .djpanas .container .youtubePlayer iframe {
+  width: 32rem;
+  height: 18rem;
+}
+.main .djpanas .container .youtubePlayer iframe:hover {
+  animation-name: hoverPop;
+  animation-duration: .4s;
 }
 .main .contacto .datos {
   padding: 5.625rem 0 11.875rem 0;
@@ -625,6 +641,19 @@ footer .bottom-redes a {
 footer .bottom-redes a:hover {
   color: red;
 }
+/*KEYFRAMES*/
+@keyframes hoverPop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.02);
+  }
+  66% {
+    transform: scale(0.95);
+  }
+}
 /*MEDIA QUERYS*/
 @media all and (max-width: 1500px) {
   .main .portada .texto {
@@ -714,5 +743,9 @@ footer .bottom-redes a:hover {
   }
   .main .contacto .formulario .formulario_contacto input[type="submit"] {
     width: 100%;
+  }
+  .main .djpanas .container .youtubePlayer iframe {
+    width: 27.2rem;
+    height: 15.3rem;
   }
 }
