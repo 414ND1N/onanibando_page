@@ -4,7 +4,10 @@
 /**/
 /*COLORES*/
 /*FUENTES*/
+/*PORTADA*/
+/*JUEGOS*/
 /*DARK MODE SWITCH*/
+/*DJPANAS*/
 .disclaimer {
   visibility: hidden;
 }
@@ -483,7 +486,11 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 .main .djpanas .container .titulo-seccion h2 {
   padding-bottom: 2rem;
 }
+.main .djpanas .container .youtube-widget {
+  visibility: hidden;
+}
 .main .djpanas .container .youtubePlayer {
+  visibility: visible;
   align-items: center;
   display: flex;
   justify-content: center;

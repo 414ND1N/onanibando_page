@@ -17,12 +17,13 @@
 @img_contacto: "../img/FONDO_PARALLAX_1.jpg";
 @img_contacto_2: "../img/FONDO_PARALLAX_2.jpg";
 
+/*PORTADA*/
 @img_1: "../img/FOTO_4.jpg";
 @img_2: "../img/FOTO_2.jpg";
 @img_3: "../img/FOTO_3.png";
 @img_4: "../img/FOTO_1.png";
 
-
+/*JUEGOS*/
 @porcent_juegos: 800%;
 @juego_1: "../img/juegos/juego_1.png";
 @juego_2: "../img/juegos/juego_2.png";
@@ -36,7 +37,6 @@
 /*DARK MODE SWITCH*/
 @light: #d8dbe0;
 @dark: #28292c;
-
 
 .disclaimer{
 	visibility: hidden;
@@ -581,7 +581,11 @@ header{
 				
 				padding-bottom: 2rem;
 			}
+			.youtube-widget{
+				visibility: @widgetYT1;
+			}
 			.youtubePlayer{
+				visibility: @widgetYT2;
 				align-items: center;
 				display: flex;
 				justify-content: center;
