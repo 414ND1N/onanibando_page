@@ -7,7 +7,6 @@
 /*PORTADA*/
 /*JUEGOS*/
 /*DARK MODE SWITCH*/
-/*DJPANAS*/
 .disclaimer {
   visibility: hidden;
 }
@@ -486,11 +485,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 .main .djpanas .container .titulo-seccion h2 {
   padding-bottom: 2rem;
 }
-.main .djpanas .container .youtube-widget {
-  visibility: hidden;
-}
 .main .djpanas .container .youtubePlayer {
-  visibility: visible;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -503,15 +498,18 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   animation-name: hoverPop;
   animation-duration: .4s;
 }
+.main .contacto.darkmode .datos {
+  background-image: url("../img/FONDO_PARALLAX_2.jpg");
+}
+.main .contacto.darkmode .datos .container .blurb h3 {
+  color: black;
+}
 .main .contacto .datos {
   padding: 5.625rem 0 11.875rem 0;
   position: relative;
   background-image: url("../img/FONDO_PARALLAX_1.jpg");
   background-size: cover;
   background-repeat: repeat-y;
-}
-.main .contacto .datos.darkmode {
-  background-image: url("../img/FONDO_PARALLAX_2.jpg");
 }
 .main .contacto .datos .overlay {
   position: absolute;

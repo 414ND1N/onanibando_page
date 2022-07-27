@@ -4,7 +4,7 @@
 	const body = document.querySelector('body');
 	const menu_bar_pc = document.getElementById('menu_bar_pc')
 	const menu_bar_movil = document.getElementById('menu_bar_movil')
-	const section_contacto = document.getElementById('contacto')
+	const section_container_tarjetas = document.getElementById('tarjetas_panas')
 
 	validarInput()
 
@@ -15,20 +15,22 @@
 
 	function validarInput(){
 		if(document.getElementById('input_toggle').checked){
-			body.style.backgroundColor = '#28292c'
-			body.style.color = 'white'
 			menu_bar_pc.className = 'menu-bar-pc darkmode'
 			menu_bar_movil.className = 'menu-bar-movil darkmode'
-			section_contacto.className = 'contacto darkmode'
+			section_container_tarjetas.className = 'tarjetas_panas darkmode'
+			
+			body.style.backgroundColor = '#28292c'
+			body.style.color = 'white'
 		}else{
-			body.style.backgroundColor = 'white'
-			body.style.color = '#303133'
 			menu_bar_pc.className = 'menu-bar-pc'
 			menu_bar_movil.className = 'menu-bar-movil'
-			section_contacto.className = 'contacto'
+			section_container_tarjetas.className = 'tarjetas_panas'
+
+			body.style.backgroundColor = 'white'
+			body.style.color = '#303133'
 		}
 	}
 
+	
 
 }())
-

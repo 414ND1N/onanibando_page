@@ -580,11 +580,7 @@ header{
 			.titulo-seccion h2{
 				padding-bottom: 2rem;
 			}
-			.youtube-widget{
-				visibility: @widgetYT1;
-			}
 			.youtubePlayer{
-				visibility: @widgetYT2;
 				align-items: center;
 				display: flex;
 				justify-content: center;
@@ -604,15 +600,22 @@ header{
 	}
 	/*Contacto*/
 	.contacto{
+		&.darkmode{
+			.datos{
+				background-image: url(@img_contacto_2);
+				.container .blurb h3{
+					color: black;
+				}
+			}
+			
+		}
 		.datos{
 			padding: 5.625rem 0 11.875rem 0;
 			position: relative;
 			background-image: url(@img_contacto);
 			background-size: cover;
 			background-repeat: repeat-y;
-			&.darkmode{
-				background-image: url(@img_contacto_2);
-			}
+			
 			.overlay{
 				position: absolute;
 				width: 100%;

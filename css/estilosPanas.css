@@ -251,6 +251,17 @@ footer .bottom-redes a:hover {
   margin-top: 5.875rem;
   text-align: center;
 }
+.main .tarjetas_panas.darkmode .container .box .card {
+  background: white;
+  box-shadow: 0 2px 10px rgba(20, 20, 20, 0.26);
+}
+.main .tarjetas_panas.darkmode .container .box .card .imgBox {
+  background: white;
+}
+.main .tarjetas_panas.darkmode .container .box .card:before,
+.main .tarjetas_panas.darkmode .container .box .card:after {
+  background: white;
+}
 .main .tarjetas_panas .titulo-seccion {
   margin: 5rem;
 }
