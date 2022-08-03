@@ -14,6 +14,7 @@
 @light: #d8dbe0;
 @dark: #28292c;
 
+/*ESTILOS GENERALES*/
 .disclaimer{
 	visibility: hidden;
 }
@@ -25,6 +26,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 body{
 	font-size: 16px;
 	font-family: @fuente-principal;
@@ -41,6 +43,7 @@ img{
 	vertical-align: top;
 	max-width: 100%;
 }
+
 a{
 	text-decoration: none;
 	color:@texto-oscuro;
@@ -67,7 +70,7 @@ a{
 /*MODO OSCURO*/
 
 .toggle-switch {
-	z-index: 100;
+	z-index: 98;
   	position: fixed;
  	width: 4rem;
  	padding: 0;
@@ -123,6 +126,18 @@ a{
 	}
 }
 
+.darkmode{
+	background: #28292c;
+	a{
+		color:white
+		
+	}
+	p{
+		color: white;
+	}
+}
+
+/*ESTILOS*/
 header{
 	.menu-bar-pc{
 		background: @blanco;
@@ -139,9 +154,6 @@ header{
 		min-height:5.875rem;
 		&.darkmode{
 			background: #28292c;
-			a{
-				color: white;
-			}
 			
 		}
 		.logo{
@@ -175,14 +187,9 @@ header{
 		min-height:5.875rem;
 		&.darkmode{
 			background: #28292c;
-			a{
-				color: white;
-			}
 			.slideMenu{
 				background: #28292c;
-				a{
-					color: white;
-				}
+				
 			}
 			
 		}
@@ -221,6 +228,7 @@ header{
 					border-top: 1px solid @gris-claro;
 				}
 			}
+			
 		}
 	}
 }

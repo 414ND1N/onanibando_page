@@ -43,6 +43,7 @@
 }
 
 /*GENERAL*/
+
 *{
 	margin: 0;
 	padding:0;
@@ -50,6 +51,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 body{
 	font-size: 16px;
 	font-family: @fuente-principal;
@@ -68,6 +70,7 @@ img{
 	vertical-align: top;
 	max-width: 100%;
 }
+
 a{
 	text-decoration: none;
 	color:@texto-oscuro;
@@ -76,6 +79,7 @@ a{
 		color: fade(@texto-oscuro, 50%);
 	}
 }
+
 .titulo-seccion{
 	h2{
 		font-size: 3.125rem;
@@ -114,7 +118,7 @@ a{
  /*MODO OSCURO*/
 
 .toggle-switch {
-	z-index: 100;
+	z-index: 98;
   	position: fixed;
  	width: 4rem;
  	padding: 0;
@@ -170,6 +174,15 @@ a{
 	}
 }
 
+.darkmode{
+	background: #28292c;
+	a{
+		color:white
+	}
+	p{
+		color: white;
+	}
+}
 /*ENCABEZADO*/
 
 header{
@@ -188,9 +201,6 @@ header{
 		min-height:5.875rem;
 		&.darkmode{
 			background: #28292c;
-			a{
-				color: white;
-			}
 			
 		}
 		.logo{
@@ -224,14 +234,9 @@ header{
 		min-height:5.875rem;
 		&.darkmode{
 			background: #28292c;
-			a{
-				color: white;
-			}
 			.slideMenu{
 				background: #28292c;
-				a{
-					color: white;
-				}
+				
 			}
 			
 		}
@@ -603,9 +608,18 @@ header{
 		&.darkmode{
 			.datos{
 				background-image: url(@img_contacto_2);
-				.container .blurb h3{
-					color: black;
+				.container .blurb{
+					h3{
+						color: black;
+					}
+					p{
+						color: black;
+					}
+					a{
+						color: black;
+					}
 				}
+				 
 			}
 			
 		}
@@ -822,8 +836,9 @@ footer{
 	.main .contacto .datos .container .blurb{
 		width: 100%;
 		max-width: 40.625rem;
-		margin-bottom: 2.25rem;
 		margin: 0 auto;
+		margin-bottom: 2.25rem;
+		
 		&:last-child{
 			margin-bottom: 0;
 		}
@@ -871,7 +886,12 @@ footer{
 			}
 		}
 	}
-
+	.main .juegos .container .col .slider{
+		height: 20rem;
+		.slide{
+			min-height: auto;
+		}
+	}
 	
 }
 
@@ -899,5 +919,14 @@ footer{
 	.main .djpanas .container .youtubePlayer iframe{
 		width: 27.2rem;
 		height: 15.3rem;
+	}
+	.main .portada .col .foto-full.der{
+		height: 10rem;
+	}
+	.main .juegos .container .col .slider{
+		height: 15rem;
+		.slide{
+			min-height: auto;
+		}
 	}
 }
