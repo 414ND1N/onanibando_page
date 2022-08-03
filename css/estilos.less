@@ -574,8 +574,126 @@ header{
 		}
 	}
 
-	/*DJPANAS*/
+	/*secciones*/
+	.secciones{
+		background: @negro-custom;
+		padding: 5.626rem 0;
+		width: 100%;
+		.titulo-seccion{
+			h2{
+				text-align: center;
+				color:@blanco;
+			}
+		}
+		.container{
+			margin-top: 2.5rem;
+			position: relative;
+			display: flex;
+			flex-direction: row;
 
+			.container_card {				
+				margin: 1rem;
+				&:first-child{
+					margin-left: 0rem;
+				}
+				&#card_1 a{
+					background: #2196f3;
+				}
+				&#card_2 a{
+					background: #23c186;
+				}
+				&#card_3 a{
+					background: #FFC23C;
+				}
+				&#card_4 a{
+					background: #e91e63;
+				}
+				.card{
+					position: relative;
+					width: 16.5rem;
+					height: 22rem;
+					box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+						inset -5px -5px 15px rgba(104, 104, 104, 0.1),
+						5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(104, 104, 104, 0.1);
+					border-radius: 15px;
+					transition: 0.5s;
+					
+					.box {
+						position: absolute;
+						top: 1rem;
+						left: 1rem;
+						right: 1rem;
+						bottom: 1rem;
+						background: #2a2b2f;
+						border-radius: 15px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						overflow: hidden;
+						transition: 0.5s;
+						&:hover{
+							transform: translateY(-2rem);
+						}
+						&:before{
+							content: "";
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 50%;
+							height: 100%;
+							background: rgba(255, 255, 255, 0.03);
+						}
+						.content{
+							padding: 2rem;
+							text-align: center;	
+							h2{
+								position: absolute;
+								top: -2rem;
+								right: 1.5rem;
+								font-size: 8rem;
+								color: rgba(255, 255, 255, 0.1);
+							}
+							h3{
+								font-size: 1.8rem;
+								color: #fff;
+								z-index: 1;
+								transition: 0.5s;
+								margin-bottom: 0.5rem;
+							}
+							p{
+								font-size: 1rem;
+								font-weight: 300;
+								color: rgba(255, 255, 255, 0.9);
+								z-index: 1;
+								transition: 0.5s;
+							}
+							a{
+								position: relative;
+								display: inline-block;
+								padding: 0.5rem 1.5rem;
+								background: black;
+								border-radius: 5px;
+								text-decoration: none;
+								color: white;
+								margin-top: 2rem;
+								box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+								transition: 0.5s;
+								&:hover{
+									box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+									background: #fff;
+									color: #000;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		
+	}
+
+	/*DJPANAS*/
 	.djpanas{
 		padding: 3.625rem 0;
 		.container{
@@ -804,7 +922,19 @@ footer{
 				padding-right: 2.25rem;
 			}
 		}
+		.secciones .container{
+			flex-wrap: wrap;
+			.container_card{
+				padding: 0.75rem;				
+				margin: 0 auto;
+				&:first-child{
+					margin: 0 auto;
+				}
+			}
+		}
 	}
+	
+
 }
 
 @media all and (max-width: 1199px){
@@ -857,6 +987,9 @@ footer{
 		}
 		
 		
+	}
+	.main .secciones .container .container_card .card .box .content a{
+		padding: 0.5rem 3rem;
 	}
 }
 
@@ -929,4 +1062,5 @@ footer{
 			min-height: auto;
 		}
 	}
+	
 }
