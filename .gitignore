@@ -1,3 +1,6 @@
 .vscode
 metadata
 prepros
+css/estilos.less
+css/estilosDiscord.less
+css/estilosPanas.less
