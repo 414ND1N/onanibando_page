@@ -308,7 +308,36 @@ footer{
         }
     }
 	
+	.intro{
+		padding: 2rem 0;
+		background: @negro-custom;
+		.titulo-seccion{
+			padding: 1rem;
+			padding-right: 0;
+			text-align: center;
+			h2{
+				color:@blanco;
+
+			}
+		}
+		.container{
+			width: 100%;
+			height: auto;
+			text-align: center;
+			.video{
+				
+				iframe{
+					height: 36rem;
+					width: 64rem;
+				}
+			}
+			
+		}
+		
+	}
     .tarjetas_panas{
+		padding: 1rem 0;
+
 		&.darkmode{
 
 			.container .box{
@@ -327,7 +356,6 @@ footer{
 				}
 			}
 		}
-        margin-top: 5.875rem;
         text-align: center;
         .titulo-seccion{
             margin: 5rem;
@@ -438,10 +466,19 @@ footer{
         width: 22.5rem;
         height: 25rem;
     }
-	
+
+	.main .intro .container .video iframe{
+		height: 31.5rem;
+		width: 56rem;
+	}
 }
 
 @media all and (max-width: 950px){
+	
+	.main .intro .container .video iframe{
+		height: 27rem;
+		width: 48rem;
+	}
 
     .main .tarjetas_panas .container .box .card{
         width: 28.8rem;
@@ -470,6 +507,10 @@ footer{
 			display: flex;
 		}
 	}
+	.main .intro .container .video iframe{
+		height: 22.5rem;
+		width: 40rem;
+	}
 	
 }
 
@@ -479,7 +520,10 @@ footer{
         width: 22.5rem;
         height: 25rem;
     }
-	
+	.main .intro .container .video iframe{
+		height: 100%;
+		width: 80%;
+	}
 }
 
 @media all and (max-width: 560px){
