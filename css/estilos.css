@@ -376,7 +376,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   padding-bottom: 0;
 }
 .main .juegos .container .col .slider {
-  width: 800%;
+  width: 1000%;
   display: flex;
 }
 .main .juegos .container .col .slider .slide {
@@ -408,6 +408,12 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 }
 .main .juegos .container .col .slider .slide.juego8 {
   background-image: url("../img/juegos/juego_8.png");
+}
+.main .juegos .container .col .slider .slide.juego9 {
+  background-image: url("../img/juegos/juego_9.png");
+}
+.main .juegos .container .col .slider .slide.juego10 {
+  background-image: url("../img/juegos/juego_10.png");
 }
 .main .panaserver {
   padding: 5.625rem 0;
