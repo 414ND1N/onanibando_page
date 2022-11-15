@@ -229,7 +229,7 @@ footer .bottom-redes a:hover {
 .main .portada {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('../img/FOTO_1.jpg');
+  background-image: url('../img/PORTADA.jpg');
   background-position: center;
   width: 100%;
   height: 40rem;
@@ -296,7 +296,6 @@ footer .bottom-redes a:hover {
   z-index: 2;
 }
 .main .tarjetas_panas .container .box {
-  position: relative;
   z-index: -1;
   display: flex;
   flex-direction: row;
@@ -401,6 +400,7 @@ footer .bottom-redes a:hover {
 }
 @media all and (max-width: 800px) {
   .main .portada {
+    background-image: url('../img/PORTADA_CUADRADA.jpg');
     height: 35rem;
   }
   .main .portada .texto {
