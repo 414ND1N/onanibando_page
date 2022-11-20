@@ -232,14 +232,14 @@ footer .bottom-redes a:hover {
   background-image: url('../img/PORTADA.jpg');
   background-position: center;
   width: 100%;
-  height: 40rem;
+  height: 30rem;
 }
 .main .portada .texto {
   text-align: center;
   color: white;
   font-weight: bold;
   font-size: 2rem;
-  padding: 8rem 8rem;
+  padding: 5rem 3rem;
   font-family: 'Poppins', sans-serif;
   text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
@@ -383,15 +383,22 @@ footer .bottom-redes a:hover {
     width: 22.5rem;
     height: 25rem;
   }
-  .main .intro .container .video iframe {
-    height: 31.5rem;
-    width: 56rem;
+  .main .portada .logo {
+    height: 13rem;
+    width: 36rem;
+    position: relative;
+    -transition: all .3s ease;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 @media all and (max-width: 950px) {
-  .main .intro .container .video iframe {
-    height: 27rem;
-    width: 48rem;
+  .main .portada {
+    height: 22rem;
+  }
+  .main .portada .texto {
+    padding: 0rem;
   }
   .main .tarjetas_panas .container .box .card {
     width: 28.8rem;
@@ -401,12 +408,11 @@ footer .bottom-redes a:hover {
 @media all and (max-width: 800px) {
   .main .portada {
     background-image: url('../img/PORTADA_CUADRADA.jpg');
-    height: 35rem;
   }
   .main .portada .texto {
     padding: 10rem 10rem;
     font-size: 1.5rem;
-    padding: 10rem 4rem;
+    padding: 4rem 1rem;
   }
   .main .portada img {
     height: 14rem;
@@ -428,10 +434,6 @@ footer .bottom-redes a:hover {
     width: 22.5rem;
     height: 25rem;
   }
-  .main .intro .container .video iframe {
-    height: 100%;
-    width: 80%;
-  }
 }
 @media all and (max-width: 560px) {
   .main .tarjetas_panas .container .box .card {
@@ -440,12 +442,6 @@ footer .bottom-redes a:hover {
   }
 }
 @media all and (max-width: 500px) {
-  .main .portada {
-    height: 30rem;
-  }
-  .main .portada .texto {
-    font-size: 1rem;
-  }
   .main .portada img {
     height: 10rem;
     width: 25rem;
