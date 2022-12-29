@@ -229,7 +229,7 @@ footer .bottom-redes a:hover {
 .main .portada {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('../img/PORTADA.jpg');
+  background-image: url('../img/PORTADA PANAS.png');
   background-position: center;
   width: 100%;
   height: 30rem;
@@ -407,7 +407,7 @@ footer .bottom-redes a:hover {
 }
 @media all and (max-width: 800px) {
   .main .portada {
-    background-image: url('../img/PORTADA_CUADRADA.jpg');
+    background-image: url('../img/PORTADA PANAS CUADRADA.png');
   }
   .main .portada .texto {
     padding: 10rem 10rem;
