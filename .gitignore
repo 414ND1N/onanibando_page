@@ -19,4 +19,8 @@ prepros.config
 CNAME
 pruebas.html
 
+css/discord.less
+css/index.less
+css/panas.less
+
 

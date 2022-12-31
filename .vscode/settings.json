@@ -1,3 +1,7 @@
 {
-    "editor.linkedEditing": true
+    "editor.linkedEditing": true,
+    "less.compile": {
+        "compress": false, // true => remove surplus whitespace
+        "sourceMap": false, // true => generate source maps (.css.map files)
+    }
 }
