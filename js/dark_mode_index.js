@@ -6,9 +6,9 @@
 	const menu_bar_movil = document.getElementById('menu_bar_movil')
 	const section_contacto = document.getElementById('contacto')
 	const section_panaserver = document.getElementById('panaserver')
+	const separadores = document.querySelectorAll('.shape-fill')
 
 	validarInput()
-
 
 	toggle.addEventListener('click', () => {
 		validarInput()
@@ -16,6 +16,10 @@
 
 	function validarInput(){
 		if(document.getElementById('input_toggle').checked){
+			separadores.forEach(element => {
+				element.setAttribute('class', 'shape-fill darkmode')
+				console.log('cambiando color del fill')
+			});
 			body.style.backgroundColor = '#28292c'
 			body.style.color = 'white'
 			menu_bar_pc.className = 'menu-bar-pc darkmode'
@@ -23,6 +27,9 @@
 			section_contacto.className = 'contacto darkmode'
 			section_panaserver.className = 'panaserver darkmode'
 		}else{
+			separadores.forEach(element => {
+				element.setAttribute('class', 'shape-fill')
+			});
 			body.style.backgroundColor = 'white'
 			body.style.color = '#303133'
 			menu_bar_pc.className = 'menu-bar-pc'

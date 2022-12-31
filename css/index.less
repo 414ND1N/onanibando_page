@@ -58,6 +58,7 @@ body{
 	font-size: 16px;
 	font-family: @fuente-principal;
 	color:@texto-oscuro;
+	overflow-x: hidden;
 }
 
 .container{
@@ -179,7 +180,7 @@ p{
 }
 
 .darkmode{
-	background: #28292c;
+	background: @dark;
 	a{
 		color:white
 	}
@@ -204,7 +205,7 @@ header{
 		border-bottom: 1px solid @gris-claro;
 		min-height:5.875rem;
 		&.darkmode{
-			background: #28292c;
+			background: @dark;
 			
 		}
 		.logo{
@@ -237,9 +238,9 @@ header{
 		border-bottom: 1px solid @gris-claro;
 		min-height:5.875rem;
 		&.darkmode{
-			background: #28292c;
+			background: @dark;
 			.slideMenu{
-				background: #28292c;
+				background: @dark;
 				
 			}
 			
@@ -409,6 +410,8 @@ header{
 						font-size: 1.125rem;
 						line-height: 1.75;
 						color: @texto-claro;
+						text-align: justify;
+						text-justify: inter-word;
 					}
 				}
 			}
@@ -419,7 +422,7 @@ header{
 	.juegos{
 		background: @negro-custom;
 		padding: 5.626rem 0;
-
+		position: relative;
 		.container{
 			display: flex;
 			align-items:center;
@@ -589,6 +592,7 @@ header{
 		background: @negro-custom;
 		padding: 5.626rem 0;
 		width: 100%;
+		position: relative;
 		.titulo-seccion{
 			h2{
 				text-align: center;
@@ -701,37 +705,29 @@ header{
 			}
 		}
 		
-		
-	}
-
-	/*DJPANAS*/
-	.djpanas{
-		padding: 3.625rem 0;
-		.container{
-			text-align: center;
-			justify-content: center;
-
-			.titulo-seccion h2{
-				padding-bottom: 2rem;
+		.curva-1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			line-height: 0;
+		}
+		.curva-1 svg {
+			position: relative;
+			display: block;
+			width: calc(107% + 1.3px);
+			height: 75px;
+			transform: rotateY(180deg);
+		}
+		.curva-1 .shape-fill {
+			&.darkmode{
+				fill: @dark;
 			}
-			.youtubePlayer{
-				align-items: center;
-				display: flex;
-				justify-content: center;
-				iframe{
-					width: 32rem;
-					height: 18rem;
-					
-					&:hover{
-						animation-name: hoverPop;
-						animation-duration: .4s;
-					}
-				}
-				
-				
-			}
+			fill: @blanco;
 		}
 	}
+	
 	/*Contacto*/
 	.contacto{
 		&.darkmode{

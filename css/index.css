@@ -22,6 +22,7 @@ body {
   font-size: 16px;
   font-family: 'Dangrek', cursive;
   color: #303133;
+  overflow-x: hidden;
 }
 .container {
   width: 90%;
@@ -223,8 +224,6 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 
   /*secciones*/
 
-  /*DJPANAS*/
-
   /*Contacto*/
 
 }
@@ -341,10 +340,13 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   font-size: 1.125rem;
   line-height: 1.75;
   color: #777777;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .main .juegos {
   background: #141618;
   padding: 5.626rem 0;
+  position: relative;
 }
 .main .juegos .container {
   display: flex;
@@ -491,6 +493,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   background: #141618;
   padding: 5.626rem 0;
   width: 100%;
+  position: relative;
 }
 .main .secciones .titulo-seccion h2 {
   text-align: center;
@@ -597,28 +600,26 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   background: #fff;
   color: #000;
 }
-.main .djpanas {
-  padding: 3.625rem 0;
+.main .secciones .curva-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
-.main .djpanas .container {
-  text-align: center;
-  justify-content: center;
+.main .secciones .curva-1 svg {
+  position: relative;
+  display: block;
+  width: calc(108.3%);
+  height: 75px;
+  transform: rotatey(180deg);
 }
-.main .djpanas .container .titulo-seccion h2 {
-  padding-bottom: 2rem;
+.main .secciones .curva-1 .shape-fill {
+  fill: #ffffff;
 }
-.main .djpanas .container .youtubePlayer {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-.main .djpanas .container .youtubePlayer iframe {
-  width: 32rem;
-  height: 18rem;
-}
-.main .djpanas .container .youtubePlayer iframe:hover {
-  animation-name: hoverPop;
-  animation-duration: .4s;
+.main .secciones .curva-1 .shape-fill.darkmode {
+  fill: #28292c;
 }
 .main .contacto {
   /*
