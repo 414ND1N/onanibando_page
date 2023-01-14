@@ -287,6 +287,10 @@ footer .bottom-redes a:hover {
   column-count: 3;
   column-gap: 40px;
 }
+.main .discord-bot .funciones .container .card .face2 .content.multi-2 {
+  column-count: 2;
+  column-gap: 40px;
+}
 .main .discord-bot .funciones .container {
   width: 100%;
   position: relative;
