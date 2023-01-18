@@ -259,8 +259,8 @@ footer .bottom-redes a:hover {
   padding-right: 5%;
 }
 .main .discord-bot .container .col.izq img {
-  width: 20rem;
-  height: 20rem;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .main .discord-bot .container .col.der {
