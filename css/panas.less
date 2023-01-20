@@ -7,9 +7,10 @@
 @gris-claro: #DFDFDE;
 
 /*FUENTES*/
-@fuente-principal: 'Dangrek', cursive;
+@fuente-principal: 'Fredoka One', cursive;;
 @fuente-secundaria: 'Poppins', sans-serif;
 @fuente-parrafo: 'Playfair Display', serif;
+@fuente-titulo: 'Concert One', cursive;
 
 @portada: '../img/PORTADA PANAS.png';
 @portada_cuadrada: '../img/PORTADA PANAS CUADRADA.png';
@@ -17,12 +18,13 @@
 @light: #d8dbe0;
 @dark: #28292c;
 
-.disclaimer{
-	visibility: hidden;
+/*ESTILOS GENERALES*/
+h3{
+	font-family: @fuente-titulo;
 }
-
-
-/*GENERAL*/
+h2{
+	font-family: @fuente-titulo;
+}
 *{
 	margin: 0;
 	padding:0;
@@ -67,13 +69,11 @@ p{
 
 
 .titulo-seccion{
+	
 	h2{
 		font-size: 3.125rem;
-		font-weight: 400;
 		line-height: 3.6875rem;
 		margin-bottom: 1.125rem;
-		font-style: italic;
-		letter-spacing: -0.02em;
 	}
 	p{
 		font-size: 1.25rem;
@@ -414,16 +414,14 @@ footer{
                     h2{
                         margin: 0;
                         padding: 0;
-                        font-weight: 600;
-                        font-size: 20px;
+                        font-size: 1rem;
                         color: #777;
                         text-transform: uppercase;
                         span{
                             font-weight: 500;
-                            font-size: 16px;
+                            font-size: 0.9rem;
                             color: #f38695;
                             display: block;
-                            margin-top: -10px;
                         }
                     }
                 }

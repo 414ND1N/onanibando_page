@@ -1,10 +1,13 @@
 /*COLORES*/
 /*FUENTES*/
 /*DARK MODE SWITCH*/
-.disclaimer {
-  visibility: hidden;
+/*ESTILOS GENERALES*/
+h3 {
+  font-family: 'Concert One', cursive;
 }
-/*GENERAL*/
+h2 {
+  font-family: 'Concert One', cursive;
+}
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +17,7 @@
 }
 body {
   font-size: 16px;
-  font-family: 'Dangrek', cursive;
+  font-family: 'Fredoka One', cursive;
   color: #303133;
   overflow-x: hidden;
 }
@@ -41,11 +44,8 @@ p {
 }
 .titulo-seccion h2 {
   font-size: 3.125rem;
-  font-weight: 400;
   line-height: 3.6875rem;
   margin-bottom: 1.125rem;
-  font-style: italic;
-  letter-spacing: -0.02em;
 }
 .titulo-seccion p {
   font-size: 1.25rem;
@@ -345,17 +345,15 @@ footer .bottom-redes a:hover {
 .main .tarjetas_panas .container .box .card .details h2 {
   margin: 0;
   padding: 0;
-  font-weight: 600;
-  font-size: 20px;
+  font-size: 1rem;
   color: #777;
   text-transform: uppercase;
 }
 .main .tarjetas_panas .container .box .card .details h2 span {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 0.9rem;
   color: #f38695;
   display: block;
-  margin-top: -10px;
 }
 @media all and (max-width: 1150px) {
   .main .tarjetas_panas .container .box .card {

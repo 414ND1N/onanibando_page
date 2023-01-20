@@ -7,9 +7,10 @@
 @toffu_color: #e4332b;
 @toffu_embed_color: #F96666;
 
-@fuente-principal: 'Dangrek', cursive;
+@fuente-principal: 'Fredoka One', cursive;;
 @fuente-secundaria: 'Poppins', sans-serif;
 @fuente-parrafo: 'Playfair Display', serif;
+@fuente-titulo: 'Concert One', cursive;
 
 @light: #d8dbe0;
 @dark: #28292c;
@@ -17,10 +18,12 @@
 @toffu_img: '../img/panas/bot_toffu_nobg.png';
 
 /*ESTILOS GENERALES*/
-.disclaimer{
-	visibility: hidden;
+h3{
+	font-family: @fuente-titulo;
 }
-
+h2{
+	font-family: @fuente-titulo;
+}
 *{
 	margin: 0;
 	padding:0;
@@ -57,13 +60,11 @@ a{
 	}
 }
 .titulo-seccion{
+	
 	h2{
 		font-size: 3.125rem;
-		font-weight: 400;
 		line-height: 3.6875rem;
 		margin-bottom: 1.125rem;
-		font-style: italic;
-		letter-spacing: -0.02em;
 	}
 	p{
 		font-size: 1.25rem;
