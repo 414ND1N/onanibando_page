@@ -285,11 +285,11 @@ footer .bottom-redes a:hover {
 }
 .main .discord-bot .funciones .container .card .face2 .content.multi-3 {
   column-count: 3;
-  column-gap: 40px;
+  column-gap: 35px;
 }
 .main .discord-bot .funciones .container .card .face2 .content.multi-2 {
   column-count: 2;
-  column-gap: 40px;
+  column-gap: 35px;
 }
 .main .discord-bot .funciones .container {
   width: 100%;
