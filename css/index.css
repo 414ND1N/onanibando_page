@@ -421,7 +421,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   color: #bd1e1e;
   border-bottom: 3px solid #bd1e1e;
 }
-.main .panaserver.darkmode .container .container-menu .contenido .boton_apoyo button {
+.main .panaserver.darkmode .container .container-menu .contenido .boton_apoyo a {
   background: #DFDFDE;
 }
 .main .panaserver .container .titulo-seccion h2 {
@@ -495,9 +495,9 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 }
 .main .panaserver .container .container-menu .contenido .boton_apoyo {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
 }
-.main .panaserver .container .container-menu .contenido .boton_apoyo button {
+.main .panaserver .container .container-menu .contenido .boton_apoyo a {
   position: relative;
   background: #444;
   color: #fff;
@@ -509,7 +509,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   padding: 1rem 3rem;
   transition: 0.2s;
 }
-.main .panaserver .container .container-menu .contenido .boton_apoyo button:hover {
+.main .panaserver .container .container-menu .contenido .boton_apoyo a:hover {
   letter-spacing: 0.2rem;
   padding: 1.1rem 3.1rem;
   background: var(--clr);
@@ -517,22 +517,22 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   /* box-shadow: 0 0 35px var(--clr); */
   animation: box 3s infinite;
 }
-.main .panaserver .container .container-menu .contenido .boton_apoyo button::before {
+.main .panaserver .container .container-menu .contenido .boton_apoyo a::before {
   content: "";
   position: absolute;
   inset: 2px;
   background: #272822;
 }
-.main .panaserver .container .container-menu .contenido .boton_apoyo button span {
+.main .panaserver .container .container-menu .contenido .boton_apoyo a span {
   position: relative;
   z-index: 1;
 }
-.main .panaserver .container .container-menu .contenido .boton_apoyo button i {
+.main .panaserver .container .container-menu .contenido .boton_apoyo a i {
   position: absolute;
   inset: 0;
   display: block;
 }
-.main .panaserver .container .container-menu .contenido .boton_apoyo button i::before {
+.main .panaserver .container .container-menu .contenido .boton_apoyo a i::before {
   content: "";
   position: absolute;
   width: 10px;
@@ -543,12 +543,12 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   background: #272822;
   transition: 0.2s;
 }
-.main .panaserver .container .container-menu .contenido .boton_apoyo button:hover i::before {
+.main .panaserver .container .container-menu .contenido .boton_apoyo a:hover i::before {
   width: 15px;
   left: 20%;
   animation: move 3s infinite;
 }
-.main .panaserver .container .container-menu .contenido .boton_apoyo button i::after {
+.main .panaserver .container .container-menu .contenido .boton_apoyo a i::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -559,7 +559,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   background: #272822;
   transition: 0.2s;
 }
-.main .panaserver .container .container-menu .contenido .boton_apoyo button:hover i::after {
+.main .panaserver .container .container-menu .contenido .boton_apoyo a:hover i::after {
   width: 15px;
   left: 80%;
   animation: move 3s infinite;
@@ -936,8 +936,8 @@ footer .bottom-redes a:hover {
     padding: 0;
     text-align: justify;
   }
-  .main .panaserver .container .container-menu .contenido .boton_apoyo button {
-    padding: 1rem 10rem;
+  .main .panaserver .container .container-menu .contenido .boton_apoyo a {
+    padding: 1rem 8rem;
   }
   .main .contacto .datos .container .blurb {
     width: 100%;
@@ -989,6 +989,9 @@ footer .bottom-redes a:hover {
   .main .juegos .container .col .slider .slide {
     min-height: auto;
   }
+  .main .panaserver .container .container-menu .contenido .boton_apoyo a {
+    padding: 1rem 3rem;
+  }
 }
 @media all and (max-width: 580px) {
   .titulo-seccion h2 {
@@ -1005,7 +1008,7 @@ footer .bottom-redes a:hover {
   .main .panaserver .container .container-menu .contenido .item .col.der {
     width: 100%;
   }
-  .main .panaserver .container .container-menu .contenido .boton_apoyo button {
+  .main .panaserver .container .container-menu .contenido .boton_apoyo a {
     padding: 1rem 1rem;
   }
   .main .contacto .formulario .formulario_contacto input[type="submit"] {
