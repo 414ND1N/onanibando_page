@@ -616,15 +616,14 @@ header{
 							text-decoration: none;
 							text-transform: uppercase;
 							border: none;
-							letter-spacing: 0.1rem;
 							font-size: 1rem;
-							padding: 1rem 3rem;
+							padding: 1rem 2rem;
 							transition: 0.2s;
 						  }
 						  
 						  a:hover {
 							letter-spacing: 0.2rem;
-							padding: 1.1rem 3.1rem;
+							padding: 1.1rem 2.1rem;
 							background: var(--clr);
 							color: var(--clr);
 							/* box-shadow: 0 0 35px var(--clr); */
@@ -640,7 +639,8 @@ header{
 						  
 						  a span {
 							position: relative;
-							z-index: 1;
+							z-index: 2;
+							font-size: 100%;
 						  }
 						  a i {
 							position: absolute;
@@ -1083,6 +1083,12 @@ footer{
 }
 
 @media all and (max-width: 980px){
+	.main .panaserver .container .container-menu .contenido .boton_apoyo a{
+		padding: 0.9rem;
+		span{
+			font-size: 80%;
+		}
+	}
 	.main .nosotros .container .col.izq{
 		width: 100%;
 		border-right: none;
@@ -1096,10 +1102,6 @@ footer{
 		width: 100%;
 		padding: 0;
 		text-align: justify;
-	}
-
-	.main .panaserver .container .container-menu .contenido .boton_apoyo a{
-		padding: 1rem 8rem;
 	}
 
 	.main .contacto .datos .container .blurb{
@@ -1164,12 +1166,12 @@ footer{
 			min-height: auto;
 		}
 	}
-	.main .panaserver .container .container-menu .contenido .boton_apoyo a{
-		padding: 1rem 3rem;
-	}
+	
 }
 
 @media all and (max-width: 580px){
+	
+	
 	.titulo-seccion{
 		h2{
 			font-size: 2.5rem;
@@ -1186,12 +1188,7 @@ footer{
 	}
 	.main .panaserver .container .container-menu .contenido .item .col.der{
 		width: 100%;
-	}
-	
-	.main .panaserver .container .container-menu .contenido .boton_apoyo a{
-		padding: 1rem 1rem;
-	}
-	
+	}	
 
 	.main .contacto .formulario .formulario_contacto input[type="submit"]{
 		width: 100%;
