@@ -572,7 +572,7 @@ header{
 					margin: 0 auto;
 					margin-top: 2.5rem;
 					border: 6px double @gris-claro;
-					padding: 0 2.25rem;
+					padding: 0 1.5rem;
 
 					>div{
 						display: none;
@@ -616,17 +616,16 @@ header{
 							text-decoration: none;
 							text-transform: uppercase;
 							border: none;
-							font-size: 1rem;
-							padding: 1rem 2rem;
-							transition: 0.2s;
+							font-size: 0.9rem;
+							padding: 1rem 1rem;
+							transition: 0.3s;
 						  }
 						  
 						  a:hover {
-							letter-spacing: 0.2rem;
-							padding: 1.1rem 2.1rem;
+							letter-spacing: 0.1rem;
+							padding: 1rem 2rem;
 							background: var(--clr);
 							color: var(--clr);
-							/* box-shadow: 0 0 35px var(--clr); */
 							animation: box 3s infinite;
 						  }
 						  
@@ -651,17 +650,17 @@ header{
 						  a i::before {
 							content: "";
 							position: absolute;
-							width: 10px;
-							height: 2px;
+							width: 1rem;
+							height: 0.2rem;
 							left: 80%;
-							top: -2px;
+							top: -0.1rem;
 							border: 2px solid var(--clr);
 							background: #272822;
 							transition: 0.2s;
 						  }
 						  
 						  a:hover i::before {
-							width: 15px;
+							width: 1rem;
 							left: 20%;
 							animation: move 3s infinite;
 						  }
@@ -669,17 +668,17 @@ header{
 						  a i::after {
 							content: "";
 							position: absolute;
-							width: 10px;
-							height: 2px;
+							width: 1rem;
+							height: 0.3rem;
 							left: 20%;
-							bottom: -2px;
-							border: 2px solid var(--clr);
+							bottom: -0.3rem;
+							border: 0.1rem solid var(--clr);
 							background: #272822;
 							transition: 0.2s;
 						  }
 						  
 						  a:hover i::after {
-							width: 15px;
+							width: 2rem;
 							left: 80%;
 							animation: move 3s infinite;
 						  }
@@ -689,7 +688,7 @@ header{
 							  transform: translateX(0);
 							}
 							50% {
-							  transform: translateX(5px);
+							  transform: translateX(2px);
 							}
 							100% {
 							  transform: translateX(0);
@@ -1135,6 +1134,12 @@ footer{
 }
 
 @media all and (max-width: 800px){
+	.main .panaserver .container .container-menu .contenido .boton_apoyo a{
+		padding: 0.9rem;
+		span{
+			font-size: 80%;
+		}
+	}
 
 	header{
 		.menu-bar-pc{
@@ -1170,7 +1175,6 @@ footer{
 }
 
 @media all and (max-width: 580px){
-	
 	
 	.titulo-seccion{
 		h2{
