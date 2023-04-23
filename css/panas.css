@@ -227,9 +227,8 @@ footer .bottom-redes a:hover {
   margin-top: 5.875rem;
 }
 .main .portada {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/PORTADA_PARALLAX.png');
   background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('../img/PORTADA PANAS.png');
   background-position: center;
   width: 100%;
   height: 30rem;
@@ -239,7 +238,7 @@ footer .bottom-redes a:hover {
   color: white;
   font-weight: bold;
   font-size: 2rem;
-  padding: 5rem 3rem;
+  margin: 5rem 3rem;
   font-family: 'Poppins', sans-serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -253,7 +252,6 @@ footer .bottom-redes a:hover {
   transform: translate(-50%, -50%);
 }
 .main .tarjetas_panas {
-  padding: 1rem 0;
   text-align: center;
 }
 .main .tarjetas_panas.darkmode .container .box .card {
@@ -383,9 +381,6 @@ footer .bottom-redes a:hover {
   }
 }
 @media all and (max-width: 800px) {
-  .main .portada {
-    background-image: url('../img/PORTADA PANAS CUADRADA.png');
-  }
   .main .portada .texto {
     padding: 10rem 10rem;
     font-size: 1.5rem;
