@@ -208,7 +208,7 @@ footer .bottom-redes a:hover {
   /*DJPANAS*/
 }
 .main .discord-embed {
-  padding: 2rem 0;
+  margin: 2rem 0;
 }
 .main .discord-embed .titulo-seccion {
   align-items: center;
@@ -221,11 +221,11 @@ footer .bottom-redes a:hover {
   text-align: center;
 }
 .main .discord-embed .container .container-iframe {
-  padding: 1rem 1rem;
+  margin: 2rem 1rem;
 }
 .main .discord-embed .container .container-iframe iframe {
   width: 100%;
-  margin-bottom: 5.25rem;
+  margin-bottom: 6rem;
 }
 .main .discord-bot {
   color: #fff;
@@ -268,7 +268,7 @@ footer .bottom-redes a:hover {
   padding-left: 5%;
 }
 .main .discord-bot .container .col.der .texto p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #fff;
   text-align: justify;
   text-justify: inter-word;

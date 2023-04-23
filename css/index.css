@@ -236,11 +236,11 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   width: 50%;
 }
 .main .portada .col .foto.izq {
-  background-image: url("../img/FOTO_6.jpg");
+  background-image: url("../img/PORTADA_1.jpg");
   background-position: left;
 }
 .main .portada .col .foto.der {
-  background-image: url("../img/FOTO_2.jpg");
+  background-image: url("../img/PORTADA_2.png");
   opacity: 0.8;
 }
 .main .portada .col .foto .overlay {
@@ -283,11 +283,11 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   background-position: center;
 }
 .main .portada .col .foto-full.izq {
-  background-image: url("../img/FOTO_3.png");
+  background-image: url("../img/PORTADA_3.png");
   opacity: 0.8;
 }
 .main .portada .col .foto-full.der {
-  background-image: url("../img/FOTO_5.jpg");
+  background-image: url("../img/PORTADA_4.jpg");
 }
 .main .portada .col .foto-full .overlay {
   opacity: 0;
@@ -369,7 +369,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   padding-bottom: 0;
 }
 .main .juegos .container .col .slider {
-  width: 1100%;
+  width: 1200%;
   display: flex;
 }
 .main .juegos .container .col .slider .slide {
@@ -410,6 +410,9 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 }
 .main .juegos .container .col .slider .slide.juego11 {
   background-image: url("../img/juegos/juego_11.png");
+}
+.main .juegos .container .col .slider .slide.juego12 {
+  background-image: url("../img/juegos/juego_12.png");
 }
 .main .panaserver {
   padding: 5.625rem 0;
