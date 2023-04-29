@@ -283,11 +283,11 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   background-position: center;
 }
 .main .portada .col .foto-full.izq {
-  background-image: url("../img/PORTADA_3.png");
+  background-image: url("../img/PORTADA_4.jpg");
   opacity: 0.8;
 }
 .main .portada .col .foto-full.der {
-  background-image: url("../img/PORTADA_4.jpg");
+  background-image: url("../img/PORTADA_3.png");
 }
 .main .portada .col .foto-full .overlay {
   opacity: 0;
