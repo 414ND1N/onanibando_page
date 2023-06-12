@@ -471,6 +471,9 @@ footer .bottom-redes a:hover {
   }
 }
 @media all and (max-width: 800px) {
+  .main .discord-bot .container .col.der .texto p {
+    font-size: 1rem;
+  }
   header .menu-bar-pc {
     display: none;
   }
