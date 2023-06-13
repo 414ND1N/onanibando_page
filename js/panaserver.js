@@ -101,6 +101,9 @@ function CoontainerMenuMinecraft(ipJava, ipBedrock, portBedrock, versionJava, ve
   divApoyo.appendChild(aApoyo);
   divMinecraft.appendChild(divApoyo);
 
+  const iEfecto = document.createElement('i');
+  aApoyo.appendChild(iEfecto);
+
   let primerHijo = contenidoMenu.firstElementChild;
   contenidoMenu.insertBefore(divMinecraft, primerHijo);
 }
