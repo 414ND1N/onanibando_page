@@ -3,11 +3,11 @@ const contenidoMenu = document.getElementById('contenido_menu');
 const encabezadoMenu = document.getElementById('encabezado_menu');
 
 // Agregado contenido servidor
-const ipJava = '51.222.8.121:40612';
-const ipBedrock = '51.222.8.121'
-const portBedrock = '40612'
-const versionJava = '1.20'
-const versionBedrock = '1.20'
+let ipJava = '51.222.82.23:40361';
+let ipBedrock = '51.222.82.23'
+let portBedrock = '40361'
+let versionJava = '1.20'
+let versionBedrock = '1.20'
 
 //Funciones
 
@@ -140,15 +140,15 @@ function ContainerVacio(servidor) {
 
 function MenuPanaServer() {
 
-  //Agregado menu otros
-  EncabezadoMenu('Otros', '#otros')
-  ContainerVacio('otros')
+//Agregado menu otros
+EncabezadoMenu('Otros', '#otros')
+ContainerVacio('otros')
 
 
-  //Agregado menu minecraft
-  EncabezadoMenu('Minecraft', '#minecraft') //Agregado encabezado al inicio
+//Agregado menu minecraft
+EncabezadoMenu('Minecraft', '#minecraft') //Agregado encabezado al inicio
 
-  CoontainerMenuMinecraft(ipJava, ipBedrock, portBedrock, versionJava, versionBedrock)
+CoontainerMenuMinecraft(ipJava, ipBedrock, portBedrock, versionJava, versionBedrock)
 
   // Realiza la solicitud a la API utilizando Fetch
   fetch('https://api.mcsrvstat.us/2/PANA-SERVER.serv.nu')
@@ -180,6 +180,33 @@ function MenuPanaServer() {
 
     }else{
       console.log("PANASERVER está online")
+
+      //Reinicio del div principal
+      contenidoMenu.innerHTML = '';
+      encabezadoMenu.innerHTML = '';
+
+      //Agregado menu otros
+      EncabezadoMenu('Otros', '#otros')
+      ContainerVacio('otros')
+
+
+      //Agregado menu minecraft
+      EncabezadoMenu('Minecraft', '#minecraft') //Agregado encabezado al inicio
+
+      //Actualizacion de datos
+      let ipJava = data.ip + ':' + data.port;
+      let ipBedrock = data.ip;
+      let portBedrock = data.port;
+      let versionJava = data.version;
+      let versionBedrock = data.version;
+
+      CoontainerMenuMinecraft(ipJava, ipBedrock, portBedrock, versionJava, versionBedrock)
+
+      const primer_encabezado = document.getElementById('encabezado_menu').firstElementChild
+		  const primer_contenido = document.getElementById('contenido_menu').firstElementChild
+
+      primer_encabezado.className = 'active'
+			primer_contenido.className = 'active'
     }
   })
   .catch(function(error) {
