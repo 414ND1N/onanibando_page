@@ -4,210 +4,6 @@
 /*PORTADA*/
 /*JUEGOS*/
 /*DARK MODE SWITCH*/
-/*ESTILOS GENERALES*/
-h3 {
-  font-family: 'Concert One', cursive;
-}
-h2 {
-  font-family: 'Concert One', cursive;
-}
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-body {
-  font-size: 16px;
-  font-family: 'Fredoka One', cursive;
-  color: #303133;
-  overflow-x: hidden;
-}
-.container {
-  width: 90%;
-  max-width: 1080px;
-  margin: 0 auto;
-}
-img {
-  vertical-align: top;
-  max-width: 100%;
-}
-a {
-  font-family: 'Playfair Display', serif;
-  text-decoration: none;
-  color: #303133;
-  transition: all 0.3s ease;
-}
-a:hover {
-  color: rgba(48, 49, 51, 0.5);
-}
-p {
-  font-family: 'Playfair Display', serif;
-}
-.titulo-seccion h2 {
-  font-size: 3.125rem;
-  line-height: 3.6875rem;
-  margin-bottom: 1.125rem;
-}
-.titulo-seccion p {
-  font-size: 1.25rem;
-  color: #777;
-}
-.imagen-modal {
-  width: 90%;
-  max-width: 1000px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.5s ease;
-}
-.imagen-modal + i {
-  position: absolute;
-  top: 2%;
-  right: 2%;
-  color: #fff;
-  font-size: 2.25rem;
-  display: inline-block;
-  padding: 0.75rem 0.875rem;
-  cursor: pointer;
-}
-/*MODO OSCURO*/
-.toggle-switch {
-  z-index: 98;
-  position: fixed;
-  width: 4rem;
-  padding: 0;
-  right: 0.75rem;
-  top: 7rem;
-}
-.toggle-switch label {
-  position: absolute;
-  width: 100%;
-  height: 1.8rem;
-  background-color: #d8dbe0;
-  border-radius: 50px;
-  cursor: pointer;
-}
-.toggle-switch input {
-  position: absolute;
-  display: none;
-}
-.toggle-switch .slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-  transition: 0.3s;
-}
-.toggle-switch input:checked ~ .slider {
-  background-color: #28292c;
-}
-.toggle-switch .slider::before {
-  content: "";
-  position: absolute;
-  top: 0.2rem;
-  left: 0.2rem;
-  width: 1.4rem;
-  height: 1.4rem;
-  border-radius: 50%;
-  box-shadow: none;
-  background-color: #28292c;
-  transition: 0.3s;
-}
-.toggle-switch input:checked ~ .slider::before {
-  transform: translateX(2.2rem);
-  background-color: #28292c;
-  box-shadow: inset 0.5rem -0.02rem 0 0 #d8dbe0;
-}
-.darkmode {
-  background: #28292c;
-}
-.darkmode a {
-  color: white;
-}
-.darkmode p {
-  color: white;
-}
-/*ENCABEZADO*/
-header .menu-bar-pc {
-  background: #fff;
-  width: 100%;
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  padding: 0 2.25rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #DFDFDE;
-  min-height: 5.875rem;
-}
-header .menu-bar-pc.darkmode {
-  background: #28292c;
-}
-header .menu-bar-pc .logo {
-  max-width: 10rem ;
-}
-header .menu-bar-pc .menu-principal a {
-  padding: 0 0.5625rem;
-}
-header .menu-bar-pc .top-redes a {
-  padding: 0 0.5625rem;
-}
-header .menu-bar-movil {
-  background: #fff;
-  width: 100%;
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  padding: 0 2.25rem;
-  display: none;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #DFDFDE;
-  min-height: 5.875rem;
-}
-header .menu-bar-movil.darkmode {
-  background: #28292c;
-}
-header .menu-bar-movil.darkmode .slideMenu {
-  background: #28292c;
-}
-header .menu-bar-movil .logo {
-  max-width: 10rem ;
-}
-header .menu-bar-movil .burger-menu {
-  cursor: pointer;
-  font-size: 2.1875rem;
-}
-header .menu-bar-movil .slideMenu {
-  position: fixed;
-  top: 5.875rem;
-  left: -80%;
-  background: #fff;
-  text-align: center;
-  padding: 1.25rem 2.25rem;
-  width: 80%;
-  transition: all 0.3s ease;
-}
-header .menu-bar-movil .slideMenu.active {
-  left: 0;
-}
-header .menu-bar-movil .slideMenu .top-redes {
-  margin-bottom: 0.625rem;
-}
-header .menu-bar-movil .slideMenu .top-redes a {
-  padding: 0 0.5625rem;
-}
-header .menu-bar-movil .slideMenu .menu-principal a {
-  display: block;
-  padding: 0.625rem 0;
-  border-top: 1px solid #DFDFDE;
-}
 /*MAIN*/
 .main {
   margin-top: 5.875rem;
@@ -236,11 +32,11 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   width: 50%;
 }
 .main .portada .col .foto.izq {
-  background-image: url("../img/PORTADA_1.jpg");
+  background-image: url("../img/extras/PORTADA_1.jpg");
   background-position: left;
 }
 .main .portada .col .foto.der {
-  background-image: url("../img/PORTADA_2.png");
+  background-image: url("../img/extras/PORTADA_2.png");
   opacity: 0.8;
 }
 .main .portada .col .foto .overlay {
@@ -283,11 +79,11 @@ header .menu-bar-movil .slideMenu .menu-principal a {
   background-position: center;
 }
 .main .portada .col .foto-full.izq {
-  background-image: url("../img/PORTADA_4.jpg");
+  background-image: url("../img/extras/PORTADA_4.jpg");
   opacity: 0.8;
 }
 .main .portada .col .foto-full.der {
-  background-image: url("../img/PORTADA_3.png");
+  background-image: url("../img/extras/PORTADA_3.png");
 }
 .main .portada .col .foto-full .overlay {
   opacity: 0;
@@ -354,12 +150,12 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 .main .juegos .container .col .titulo-seccion {
   padding: 3.125rem;
   padding-right: 0;
-  text-align: center;
 }
 .main .juegos .container .col .titulo-seccion h2 {
   color: #fff;
 }
 .main .juegos .container .col .titulo-seccion p {
+  text-align: justify;
   color: rgba(255, 255, 255, 0.6);
   padding-bottom: 1.125rem;
   font-size: 1.125rem;
@@ -426,9 +222,6 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 }
 .main .panaserver.darkmode .container .container-menu .contenido .boton_apoyo a {
   background: #DFDFDE;
-}
-.main .panaserver .container .titulo-seccion h2 {
-  text-align: center;
 }
 .main .panaserver .container .container-menu {
   margin-top: 2.5rem;
@@ -721,102 +514,8 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 .main .secciones .curva-1 .shape-fill.darkmode {
   fill: #28292c;
 }
-.main .contacto {
-  /*
-		.formulario{
-			position: relative;
-			z-index: 3;
-			background: @blanco;
-			max-width: 40.625rem;
-			margin: 0 auto;
-			padding: 2.25rem;
-			margin-top: -6.25rem;
-			width: 90%;
-			.formulario_contacto{
-				.input-group{
-					position: relative;
-					margin-bottom: 2rem;
-
-					input[type="text"],
-					input[type="email"],
-					textarea{
-						font-family: @fuente-secundaria;
-						font-size: 1rem;
-						color:@texto-oscuro;
-						width: 100%;
-						outline: none;
-						padding: 0.9375rem 0;
-						background: none;
-						border: none;
-						vertical-align: top;
-						border-bottom: 2px solid fade(@rojo_oscuro, 50%);
-
-						&:focus{
-							border-bottom: 2px solid @rojo_oscuro;
-
-						}
-
-					}
-					textarea{
-						max-width: 100%;
-						max-height: 10.25rem;
-						min-height: 5.125rem;
-						min-width: 100%;
-					}
-					label{
-						color: @texto-claro;
-						font-family: @fuente-secundaria;
-
-						&.label{
-							position: absolute;
-							top: 1rem;
-							left: 0;
-							font-size: 1rem;
-							line-height: 1rem;
-							margin-left: 1rem;
-							transition: all .3s ease;
-							&.active{
-								top: -0.25rem;
-								margin-left: 0;
-								font-size: 0.75rem;
-								line-height: 0.75rem;
-								color: @texto-claro;
-							}
-						}
-					}
-					.error{
-						position: absolute;
-						color: rgb(255,59,59);
-						font-family: @fuente-secundaria;
-						font-size: 0.875rem;
-					}
-				}
-				input[type="submit"]{
-					font-family: @fuente-secundaria;
-					background: @rojo_oscuro;
-					color: @blanco;
-					border-radius: 1px;
-					border: 2px solid @blanco;
-					cursor: pointer;
-					display: block;
-					margin: 0 auto;
-					margin-top: 3.125rem;
-					padding: 0.9375rem;
-					width: 20%;
-					outline: none;
-					transition: all .3s ease;
-
-					&:hover{
-						background: darken(@rojo_oscuro, 5%);
-					}
-				}
-			}
-
-		}
-		*/
-}
 .main .contacto.darkmode .datos {
-  background-image: url("../img/FONDO_PARALLAX_2.jpg");
+  background-image: url("../img/fondos/FONDO_PARALLAX_2.jpg");
 }
 .main .contacto.darkmode .datos .container .blurb h3 {
   color: black;
@@ -830,7 +529,7 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 .main .contacto .datos {
   padding: 5.625rem 0 11.875rem 0;
   position: relative;
-  background-image: url("../img/FONDO_PARALLAX_1.jpg");
+  background-image: url("../img/fondos/FONDO_PARALLAX_1.jpg");
   background-size: cover;
   background-repeat: repeat-y;
 }
@@ -866,24 +565,6 @@ header .menu-bar-movil .slideMenu .menu-principal a {
 .main .contacto .datos p {
   font-size: 1rem;
   color: #777;
-}
-/*FOOTER*/
-footer {
-  background: black;
-  padding: 5.625rem 0;
-  text-align: center;
-  color: #fff;
-}
-footer .bottom-redes {
-  margin-top: 2.25rem;
-}
-footer .bottom-redes a {
-  padding: 0 0.5625rem;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-footer .bottom-redes a:hover {
-  color: red;
 }
 /*KEYFRAMES*/
 @keyframes hoverPop {
@@ -975,12 +656,6 @@ footer .bottom-redes a:hover {
   }
   .main .panaserver .container .container-menu .contenido .boton_apoyo a span {
     font-size: 80%;
-  }
-  header .menu-bar-pc {
-    display: none;
-  }
-  header .menu-bar-movil {
-    display: flex;
   }
   .main .portada .col {
     width: 100%;
