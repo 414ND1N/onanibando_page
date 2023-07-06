@@ -6,14 +6,21 @@
 	const menu_bar_movil = document.getElementById('menu_bar_movil')
 	const separadores = document.querySelectorAll('.shape-fill')
 	
-	validarInput()
+	// Verificar el estado almacenado en localStorage al cargar la página
+    const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+    toggle.checked = darkModeEnabled;
+    validarInput(darkModeEnabled);
 
 	toggle.addEventListener('click', () => {
-		validarInput()
+		const darkModeEnabled = toggle.checked;
+        validarInput(darkModeEnabled);
+
+        // Guardar el estado en localStorage
+        localStorage.setItem('darkModeEnabled', darkModeEnabled);
 	});
 
-	function validarInput(){
-		if(document.getElementById('input_toggle').checked){
+	function validarInput(darkModeEnabled){
+		if(darkModeEnabled){
 			separadores.forEach(element => {
 				element.setAttribute('class', 'shape-fill darkmode')
 				console.log('cambiando color del fill')

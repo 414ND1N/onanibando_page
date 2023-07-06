@@ -6,15 +6,21 @@
 	const menu_bar_movil = document.getElementById('menu_bar_movil')
 	const section_container_tarjetas = document.getElementById('tarjetas_panas')
 
-	validarInput()
-
+	// Verificar el estado almacenado en localStorage al cargar la página
+    const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+    toggle.checked = darkModeEnabled;
+    validarInput(darkModeEnabled);
 
 	toggle.addEventListener('click', () => {
-		validarInput()
+		const darkModeEnabled = toggle.checked;
+        validarInput(darkModeEnabled);
+
+        // Guardar el estado en localStorage
+        localStorage.setItem('darkModeEnabled', darkModeEnabled);
 	});
 
-	function validarInput(){
-		if(document.getElementById('input_toggle').checked){
+	function validarInput(darkModeEnabled){
+		if(darkModeEnabled){
 			menu_bar_pc.className = 'menu-bar-pc darkmode'
 			menu_bar_movil.className = 'menu-bar-movil darkmode'
 			section_container_tarjetas.className = 'tarjetas_panas darkmode'
@@ -30,7 +36,5 @@
 			body.style.color = '#303133'
 		}
 	}
-
-	
 
 }())

@@ -4,8 +4,8 @@
 @texto-claro : #777;
 @rojo: darkred;
 @gris-claro: #DFDFDE;
-@toffu_color: #e4332b;
-@toffu_embed_color: #F96666;
+@toffu_color: #da351f;
+@toffu_embed_color: #fe624c;
 
 /*FUENTES*/
 @fuente-principal: 'Fredoka One', sans-serif;
@@ -52,7 +52,7 @@ footer{
 				margin: 2rem 1rem;
 				iframe{
 					width: 100%;
-					margin-bottom: 6rem;
+					margin-bottom: 3rem;
 				}
 			}
 		}
@@ -66,7 +66,7 @@ footer{
 		flex-direction: column;
 		align-items: center;
 		min-height: 30rem;
-		padding: 5.626rem 20vw;
+		padding: 5.626rem 15vw;
 		width: 100%;
 		background: @negro-custom;
 		
@@ -74,6 +74,7 @@ footer{
 			color:@blanco;
 			padding-bottom: 3rem;
 		}
+		
 		.container{
 			display: flex;
 			flex-direction: row;
@@ -109,10 +110,9 @@ footer{
 		.funciones{
 			color: black;
 			display: flex;
-			justify-content: center;
+			justify-content: space-between;
 			flex-direction: row;
-			flex-wrap: wrap;
-			align-content: center;
+			flex-wrap: nowrap;
 			padding: 1rem 0;
 			.container .card .face2 .content.multi-3{
 				column-count: 3;
@@ -136,12 +136,12 @@ footer{
 			.container .card{
 				position: relative;
 				cursor: pointer;
-				padding: 0rem 1rem;
+				padding: 0rem 0.75rem;
 				margin: 0 auto;
 			}
 			
 			.container .card .face{
-				width: 325px;
+				width: 300px;
 				height: 200px;
 				transition: 0.5s;
 			}
@@ -189,7 +189,7 @@ footer{
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				padding: 20px;
+				padding: 12.5px;
 				box-sizing: border-box;
 				box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
 				transform: translateY(-100px);
@@ -199,22 +199,17 @@ footer{
 				transform: translateY(0);
 			}
 			
-			.container .card .face.face2 .content p{
-				margin: 0;
-				padding: 0;
-			}
-			
-			.container .card .face.face2 .content a{
-				margin: 15px 0 0;
-				display:  inline-block;
+			.container .card .face.face2 .content a,
+			.container .card .face.face2 .content li{
+				text-align: center;
+				list-style-type: none;
 				text-decoration: none;
-				font-weight: 900;
+				font-weight: 500;
 				color: #333;
-				padding: 5px;
-				border: 1px solid #333;
 			}
 			
-			.container .card .face.face2 .content a:hover{
+			.container .card .face.face2 .content a:hover,
+			.container .card .face.face2 .content li:hover{
 				background: #333;
 				color: #fff;
 			}
