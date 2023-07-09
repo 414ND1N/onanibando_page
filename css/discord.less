@@ -87,9 +87,9 @@ footer{
 				align-items:center;
 				padding-right: 5%;
 				img{
-					width: 95%;
-					height: 95%;
-					object-fit: cover;
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
 					border-radius: 5px;
 				}
 			}
@@ -98,11 +98,11 @@ footer{
 				padding-left: 5%;
 				.texto{
 					p{
-						font-size: 1.5rem;
+						margin: 3rem auto;
+						font-size: 1.35rem;
 						color: @blanco;
 						text-align: justify;
 						text-justify: inter-word;
-						margin-bottom:2em;
 					}
 				}
 			}
@@ -210,7 +210,7 @@ footer{
 			
 			.container .card .face.face2 .content a:hover,
 			.container .card .face.face2 .content li:hover{
-				background: #333;
+				background: @toffu_embed_color;
 				color: #fff;
 			}
 
@@ -295,7 +295,7 @@ footer{
 	}
 }
 
-@media all and (max-width: 1200px){
+@media all and (max-width: 1250px){
 	.main .discord-bot .container .col.izq{
 		width: 100%;
 		border-right: none;
@@ -311,7 +311,11 @@ footer{
 		text-align: justify;
 		.texto p{
 			font-size: 1.25rem;
+			margin: 1.5rem auto;
 		}
+	}
+	.main .discord-bot .funciones .container.cards{
+		flex-direction: column;
 	}
 }
 @media all and (max-width: 800px){
