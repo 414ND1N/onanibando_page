@@ -67,6 +67,7 @@ footer .bottom-redes a:hover {
   height: 100%;
   object-fit: contain;
   border-radius: 5px;
+  max-width: 350px;
 }
 .main .discord-bot .container .col.der {
   width: 55%;
@@ -74,104 +75,101 @@ footer .bottom-redes a:hover {
 }
 .main .discord-bot .container .col.der .texto p {
   margin: 3rem auto;
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   color: #fff;
   text-align: justify;
   text-justify: inter-word;
 }
 .main .discord-bot .funciones {
   color: black;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding: 1rem 0;
-}
-.main .discord-bot .funciones .container .card .face2 .content.multi-3 {
-  column-count: 3;
-  column-gap: 15px;
-}
-.main .discord-bot .funciones .container .card .face2 .content.multi-2 {
-  column-count: 2;
-  column-gap: 35px;
-}
-.main .discord-bot .funciones .container {
   width: 100%;
-  position: relative;
+  margin: 5rem 0;
+}
+.main .discord-bot .funciones .cards {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.main .discord-bot .funciones .container .card {
+.main .discord-bot .funciones .cards .card .face2 .content.multi-3 {
+  column-count: 3;
+  column-gap: 10px;
+}
+.main .discord-bot .funciones .cards .card .face2 .content.multi-2 {
+  column-count: 2;
+  column-gap: 30px;
+}
+.main .discord-bot .funciones .cards .card {
   position: relative;
   cursor: pointer;
-  padding: 0rem 0.75rem;
-  margin: 0 auto;
 }
-.main .discord-bot .funciones .container .card .face {
-  width: 300px;
-  height: 200px;
+.main .discord-bot .funciones .cards .card .face {
+  width: 17rem;
+  height: 10rem;
   transition: 0.5s;
 }
-.main .discord-bot .funciones .container .card .face.face1 {
+.main .discord-bot .funciones .cards .card .face.face1 {
   position: relative;
   background: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  transform: translateY(100px);
+  transform: translateY(3.75rem);
 }
-.main .discord-bot .funciones .container .card:hover .face.face1 {
+.main .discord-bot .funciones .cards .card:hover .face.face1 {
   background: #da351f;
   transform: translateY(0);
 }
-.main .discord-bot .funciones .container .card .face.face1 .content {
+.main .discord-bot .funciones .cards .card .face.face1 .content {
   text-align: center;
   opacity: 0.2;
   transition: 0.5s;
 }
-.main .discord-bot .funciones .container .card:hover .face.face1 .content {
+.main .discord-bot .funciones .cards .card:hover .face.face1 .content {
   opacity: 1;
 }
-.main .discord-bot .funciones .container .card .face.face1 .content img {
-  max-width: 100px;
+.main .discord-bot .funciones .cards .card .face.face1 .content img {
+  max-width: 6.5rem;
 }
-.main .discord-bot .funciones .container .card .face.face1 .content h3 {
-  margin: 10px 0 0;
+.main .discord-bot .funciones .cards .card .face.face1 .content h3 {
   padding: 0;
   color: #fff;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
-.main .discord-bot .funciones .container .card .face.face2 {
+.main .discord-bot .funciones .cards .card .face.face2 {
   position: relative;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12.5px;
+  padding: 2rem;
   box-sizing: border-box;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   transform: translateY(-100px);
 }
-.main .discord-bot .funciones .container .card:hover .face.face2 {
+.main .discord-bot .funciones .cards .card:hover .face.face2 {
   transform: translateY(0);
 }
-.main .discord-bot .funciones .container .card .face.face2 .content a,
-.main .discord-bot .funciones .container .card .face.face2 .content li {
+.main .discord-bot .funciones .cards .card .face.face2 .content a,
+.main .discord-bot .funciones .cards .card .face.face2 .content li {
   text-align: center;
   list-style-type: none;
   text-decoration: none;
   font-weight: 500;
   color: #333;
+  font-size: 0.9rem;
 }
-.main .discord-bot .funciones .container .card .face.face2 .content a:hover,
-.main .discord-bot .funciones .container .card .face.face2 .content li:hover {
+.main .discord-bot .funciones .cards .card .face.face2 .content a:hover,
+.main .discord-bot .funciones .cards .card .face.face2 .content li:hover {
   background: #fe624c;
   color: #fff;
+  font-size: 1rem;
+  transition: 0.5s;
 }
 .main .discord-bot .curva-1 {
   position: absolute;
@@ -238,14 +236,16 @@ footer .bottom-redes a:hover {
   fill: #141618;
 }
 @media all and (max-width: 1350px) {
-  .main .discord-bot .container .col.izq {
-    width: 50%;
-  }
-  .main .discord-bot .container .col.der {
-    width: 50%;
+  .main .discord-bot .funciones .cards {
+    gap: 1.75rem;
   }
 }
 @media all and (max-width: 1250px) {
+  .main .discord-bot .container .col.der .texto p {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 950px) {
   .main .discord-bot .container .col.izq {
     width: 100%;
     border-right: none;
@@ -255,6 +255,17 @@ footer .bottom-redes a:hover {
     padding: 0;
     margin-bottom: 2.25rem;
   }
+  .main .discord-bot .funciones .cards {
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+  }
+  .main .discord-bot .funciones .cards .card {
+    width: 80%;
+  }
+  .main .discord-bot .funciones .cards .card .face {
+    width: 100%;
+  }
   .main .discord-bot .container .col.der {
     width: 100%;
     padding: 0;
@@ -263,9 +274,6 @@ footer .bottom-redes a:hover {
   .main .discord-bot .container .col.der .texto p {
     font-size: 1.25rem;
     margin: 1.5rem auto;
-  }
-  .main .discord-bot .funciones .container.cards {
-    flex-direction: column;
   }
 }
 @media all and (max-width: 800px) {

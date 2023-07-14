@@ -41,6 +41,7 @@
 
     .tarjetas_panas{
 		text-align: center;
+        margin: 3rem;
 		&.darkmode{
 			.container .box{
 				.card{
@@ -60,22 +61,26 @@
             margin: 5rem;
         }
         .container{
-
             position: relative;
             z-index: 2;
             
             .box{
-                z-index: -1;
+                width: 100%;
 				display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
+                gap: 5rem;
+                justify-content: space-evenly;
+                
+                
                 .card{
-                    padding: 2rem;
+                    flex-grow: 0;
                     position: relative;
+                    min-width: 18rem;
+                    min-height: 20rem;
                     width: 18rem;
                     height: 20rem;
                     background: #212121;
-                    margin: 2rem auto;
                     border-radius: 4px;
                     box-shadow:0 2px 10px rgba(255, 255, 255, 0.26);
 					transition: .5s all ease;
