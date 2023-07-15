@@ -234,4 +234,7 @@ footer .bottom-redes a:hover {
   header .menu-bar-movil {
     display: flex;
   }
+  footer {
+    padding: 3rem 0;
+  }
 }
