@@ -2,6 +2,7 @@
 *.less
 CNAME
 pruebas.html
+.vscode/
 
 
 
