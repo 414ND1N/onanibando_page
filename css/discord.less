@@ -100,7 +100,7 @@ footer{
 				.texto{
 					p{
 						margin: 3rem auto;
-						font-size: 1.1rem;
+						font-size: clamp(1rem, 1rem, 1.75rem);
 						color: @blanco;
 						text-align: justify;
 						text-justify: inter-word;
@@ -112,7 +112,6 @@ footer{
 			color: black;
 			width: 100%;
 			margin: 5rem 0;
-
 			.cards{
 				width: 100%;
 				display: flex;
@@ -204,14 +203,14 @@ footer{
 					text-decoration: none;
 					font-weight: 500;
 					color: #333;
-					font-size: 0.9rem;
+					font-size: clamp(0.35rem, 0.8rem, 1.1rem);
 				}
 				
 				.card .face.face2 .content a:hover,
 				.card .face.face2 .content li:hover{
 					background: @toffu_embed_color;
 					color: #fff;
-					font-size: 1rem;
+					font-size: clamp(0.4rem, 0.8rem, 1.2rem);
 					transition: 0.5s;
 				}
 			}
@@ -293,14 +292,6 @@ footer{
 	}
 }
 
-@media all and (max-width: 1250px){
-	
-	.main .discord-bot .container .col.der .texto p{
-		font-size: 1rem;
-	}
-
-}
-
 @media all and (max-width: 950px){
 	.main .discord-bot .container .col.izq{
 		width: 100%;
@@ -320,37 +311,17 @@ footer{
 			width: 80%;
 			.face{
 				width: 100%;
-				&.face2 .content li{
-					font-size: 0.85rem;
-				}
 			}
-		}
-		.card .face.face2 .content li:hover{
-			font-size: 0.9rem;
 		}
 	}
 	.main .discord-bot .container .col.der{
 		width: 100%;
 		padding: 0;
 		text-align: justify;
-		.texto p{
-			font-size: 1.25rem;
-			margin: 1.5rem auto;
-		}
 	}
 }
 
 @media all and (max-width: 800px){
-	.main .discord-bot .container .col.der .texto p{
-		font-size: 1rem;
-	}
-
-	.main .discord-bot .funciones .cards .card .face.face2 .content li{
-		font-size: 0.8rem;	
-	}
-	.main .discord-bot .funciones .cards .card .face.face2 .content li:hover{
-		font-size: 0.9rem;	
-	}
 
 	footer{
 		.bottom-redes{
@@ -368,19 +339,12 @@ footer{
 	}
 }
 
-@media all and (max-width: 500px){
-	.main .discord-bot .funciones .cards .card .face.face2 .content li{
-		font-size: 0.7rem;	
-	}
-	.main .discord-bot .funciones .cards .card .face.face2 .content li:hover{
-		font-size: 0.8rem;	
-	}
-}
 @media all and (max-width: 350px){
-	.main .discord-bot .funciones .cards .card .face.face2 .content li{
-		font-size: 0.7rem;	
-	}
+
 	.main .discord-bot .funciones .cards .card .face.face2 .content{
 		column-count: 1;	
+	}
+	.main .discord-bot .funciones .cards .card .face.face2 .content li{
+		font-size: 0.7rem;	
 	}
 }
