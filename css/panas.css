@@ -9,12 +9,14 @@
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/fondos/PORTADA_PARALLAX.png');
   background-size: cover;
   background-position: center;
+  object-fit: contain;
   width: 100%;
-  height: 30rem;
+  height: 40vh;
 }
-.main .portada img {
-  height: 18rem;
-  width: 45rem;
+.main .portada .logo {
+  height: auto;
+  width: 50%;
+  transition: 0.3s ease;
   position: relative;
   -transition: all 0.3s ease;
   top: 50%;
@@ -54,8 +56,8 @@
 .main .tarjetas_panas .container .box .card {
   flex-grow: 0;
   position: relative;
-  min-width: 18rem;
-  min-height: 20rem;
+  min-width: 10.125rem;
+  min-height: 11.25rem;
   width: 18rem;
   height: 20rem;
   background: #212121;
@@ -132,22 +134,13 @@
     width: 22.5rem;
     height: 25rem;
   }
-  .main .portada .logo {
-    height: 13rem;
-    width: 36rem;
-    position: relative;
-    -transition: all 0.3s ease;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 }
 @media all and (max-width: 950px) {
   .main .portada {
-    height: 22rem;
+    height: 30vh;
   }
-  .main .portada .texto {
-    padding: 0rem;
+  .main .portada .logo {
+    width: 80%;
   }
   .main .tarjetas_panas .container .box .card {
     width: 28.8rem;
@@ -155,15 +148,6 @@
   }
 }
 @media all and (max-width: 800px) {
-  .main .portada .texto {
-    padding: 10rem 10rem;
-    font-size: 1.5rem;
-    padding: 4rem 1rem;
-  }
-  .main .portada img {
-    height: 14rem;
-    width: 35rem;
-  }
   .main .intro .container .video iframe {
     height: 22.5rem;
     width: 40rem;

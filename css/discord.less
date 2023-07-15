@@ -311,6 +311,7 @@ footer{
 		padding: 0;
 		margin-bottom: 2.25rem;
 	}
+	
 	.main .discord-bot .funciones .cards {
 		gap: 0;
 		flex-direction: column;
@@ -319,7 +320,13 @@ footer{
 			width: 80%;
 			.face{
 				width: 100%;
+				&.face2 .content li{
+					font-size: 0.85rem;
+				}
 			}
+		}
+		.card .face.face2 .content li:hover{
+			font-size: 0.9rem;
 		}
 	}
 	.main .discord-bot .container .col.der{
@@ -338,6 +345,13 @@ footer{
 		font-size: 1rem;
 	}
 
+	.main .discord-bot .funciones .cards .card .face.face2 .content li{
+		font-size: 0.8rem;	
+	}
+	.main .discord-bot .funciones .cards .card .face.face2 .content li:hover{
+		font-size: 0.9rem;	
+	}
+
 	footer{
 		.bottom-redes{
 			margin-top: 1.25rem;
@@ -351,5 +365,22 @@ footer{
 				}
 			}
 		}
+	}
+}
+
+@media all and (max-width: 500px){
+	.main .discord-bot .funciones .cards .card .face.face2 .content li{
+		font-size: 0.7rem;	
+	}
+	.main .discord-bot .funciones .cards .card .face.face2 .content li:hover{
+		font-size: 0.8rem;	
+	}
+}
+@media all and (max-width: 350px){
+	.main .discord-bot .funciones .cards .card .face.face2 .content li{
+		font-size: 0.7rem;	
+	}
+	.main .discord-bot .funciones .cards .card .face.face2 .content{
+		column-count: 1;	
 	}
 }

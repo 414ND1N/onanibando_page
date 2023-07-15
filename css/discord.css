@@ -266,6 +266,12 @@ footer .bottom-redes a:hover {
   .main .discord-bot .funciones .cards .card .face {
     width: 100%;
   }
+  .main .discord-bot .funciones .cards .card .face.face2 .content li {
+    font-size: 0.85rem;
+  }
+  .main .discord-bot .funciones .cards .card .face.face2 .content li:hover {
+    font-size: 0.9rem;
+  }
   .main .discord-bot .container .col.der {
     width: 100%;
     padding: 0;
@@ -280,6 +286,12 @@ footer .bottom-redes a:hover {
   .main .discord-bot .container .col.der .texto p {
     font-size: 1rem;
   }
+  .main .discord-bot .funciones .cards .card .face.face2 .content li {
+    font-size: 0.8rem;
+  }
+  .main .discord-bot .funciones .cards .card .face.face2 .content li:hover {
+    font-size: 0.9rem;
+  }
   footer .bottom-redes {
     margin-top: 1.25rem;
   }
@@ -290,5 +302,21 @@ footer .bottom-redes a:hover {
   }
   footer .bottom-redes a:hover {
     color: red;
+  }
+}
+@media all and (max-width: 500px) {
+  .main .discord-bot .funciones .cards .card .face.face2 .content li {
+    font-size: 0.7rem;
+  }
+  .main .discord-bot .funciones .cards .card .face.face2 .content li:hover {
+    font-size: 0.8rem;
+  }
+}
+@media all and (max-width: 350px) {
+  .main .discord-bot .funciones .cards .card .face.face2 .content li {
+    font-size: 0.7rem;
+  }
+  .main .discord-bot .funciones .cards .card .face.face2 .content {
+    column-count: 1;
   }
 }

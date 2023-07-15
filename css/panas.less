@@ -26,11 +26,14 @@
 		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(@portada);
         background-size: cover;
         background-position: center;
+        object-fit: contain;
         width: 100%;
-        height: 30rem;
-        img{
-            height: 18rem;
-            width: 45rem;
+        height: 40vh;
+        .logo{
+            height: auto;
+            width: 50%;
+            transition: .3s ease;
+
             position: relative;
             -transition: all .3s ease;
             top: 50%;
@@ -76,8 +79,8 @@
                 .card{
                     flex-grow: 0;
                     position: relative;
-                    min-width: 18rem;
-                    min-height: 20rem;
+                    min-width: 10.125rem;
+                    min-height: 11.25rem;
                     width: 18rem;
                     height: 20rem;
                     background: #212121;
@@ -167,17 +170,6 @@
 			width: 22.5rem;
 			height: 25rem;
 		}
-		.portada{
-			.logo{
-				height: 13rem;
-				width: 36rem;
-				position: relative;
-				-transition: all .3s ease;
-				top: 40%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-			}
-		}
 	}
 }
 
@@ -185,10 +177,10 @@
 
     .main {
 		.portada{
-        	height: 22rem;
-			.texto{
-				padding: 0rem;
-			}
+            height: 30vh;
+            .logo{
+                width: 80%;
+            }
 		}
 		.tarjetas_panas .container .box .card{
 			width: 28.8rem;
@@ -197,18 +189,9 @@
 	}
 	
 }
+
 @media all and (max-width: 800px){
-    .main .portada{
-        .texto{
-            padding: 10rem 10rem;
-            font-size: 1.5rem;
-            padding: 4rem 1rem;
-        }
-        img{
-            height: 14rem;
-            width: 35rem;
-        }
-    }
+
 	.main .intro .container .video iframe{
 		height: 22.5rem;
 		width: 40rem;
