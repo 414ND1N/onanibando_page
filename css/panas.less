@@ -69,15 +69,14 @@
             
             .box{
                 width: 100%;
-				display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 5rem;
-                justify-content: space-evenly;
-                
+                --columnas-panas: 3;
+                display: grid;
+                gap: 2rem;
+                justify-items: center;
+                grid-template-columns: 
+                    repeat(var(--columnas-panas), 1fr);
                 
                 .card{
-                    flex-grow: 0;
                     position: relative;
                     min-width: 10.125rem;
                     min-height: 11.25rem;
@@ -163,17 +162,18 @@
     }
 }
 
-@media all and (max-width: 1150px){
+@media all and (max-width: 1250px){
 
-    .main {
-		.tarjetas_panas .container .box .card{
-			width: 22.5rem;
-			height: 25rem;
-		}
-	}
+    .main .tarjetas_panas .container .box{
+        --columnas-panas: 2;
+    }
 }
 
 @media all and (max-width: 950px){
+
+    .main .tarjetas_panas .container .box{
+        --columnas-panas: 1;
+    }
 
     .main {
 		.portada{
@@ -210,8 +210,8 @@
 @media all and (max-width: 560px){
 
     .main .tarjetas_panas .container .box .card{
-        width: 18rem;
-        height: 20rem;
+        width: 12.5rem;
+        height: auto;
     }
 	
 }
@@ -220,7 +220,7 @@
     .main .portada{
         img{
             height: 10rem;
-            width: 25rem;
+            width: auto;
         }
     }
 	

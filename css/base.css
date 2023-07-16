@@ -238,3 +238,19 @@ footer .bottom-redes a:hover {
     padding: 3rem 0;
   }
 }
+@media all and (max-width: 500px) {
+  .titulo-seccion h2 {
+    font-size: 2.125rem;
+  }
+  .titulo-seccion p {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 300px) {
+  .titulo-seccion h2 {
+    font-size: 1.5rem;
+  }
+  .titulo-seccion p {
+    font-size: 1rem;
+  }
+}
