@@ -23,14 +23,14 @@
 		if(darkModeEnabled){
 			menu_bar_pc.className = 'menu-bar-pc darkmode'
 			menu_bar_movil.className = 'menu-bar-movil darkmode'
-			section_container_tarjetas.className = 'tarjetas_panas darkmode'
+			section_container_tarjetas.className = 'tarjetas darkmode'
 			
 			body.style.backgroundColor = '#28292c'
 			body.style.color = 'white'
 		}else{
 			menu_bar_pc.className = 'menu-bar-pc'
 			menu_bar_movil.className = 'menu-bar-movil'
-			section_container_tarjetas.className = 'tarjetas_panas'
+			section_container_tarjetas.className = 'tarjetas'
 
 			body.style.backgroundColor = 'white'
 			body.style.color = '#303133'

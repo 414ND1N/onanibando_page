@@ -2,6 +2,10 @@
 /*FUENTES*/
 /*DARK MODE SWITCH*/
 /*ESTILOS GENERALES*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.875rem;
+}
 h3 {
   font-family: 'Concert One', sans-serif;
 }
