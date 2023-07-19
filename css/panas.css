@@ -25,7 +25,7 @@
 }
 .main .tarjetas {
   text-align: center;
-  margin-top: 5.875rem;
+  margin: 5.875rem 0;
 }
 .main .tarjetas.darkmode .container .box .card {
   background: white;
@@ -141,7 +141,7 @@
     height: 30vh;
   }
   .main .portada .logo {
-    width: 80%;
+    width: 75%;
   }
   .main .tarjetas .container .box .card {
     width: 28.8rem;
