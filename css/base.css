@@ -7,10 +7,10 @@ html {
   scroll-padding-top: 5.875rem;
 }
 h3 {
-  font-family: 'Concert One', sans-serif;
+  font-family: 'PT Sans', serif;
 }
 h2 {
-  font-family: 'Concert One', sans-serif;
+  font-family: 'PT Sans', serif;
 }
 * {
   margin: 0;
@@ -21,7 +21,7 @@ h2 {
 }
 body {
   font-size: 16px;
-  font-family: 'Fredoka One', sans-serif;
+  font-family: 'Nunito', sans-serif;
   color: #303133;
   overflow-x: hidden;
 }
@@ -44,7 +44,7 @@ a:hover {
   color: rgba(48, 49, 51, 0.5);
 }
 p {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Nunito', sans-serif;
 }
 .titulo-seccion {
   align-items: center;

@@ -228,7 +228,7 @@
 }
 .main .panaserver .container .container-menu .encabezado {
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   letter-spacing: 0.1em;
   text-transform: upppercase;
   list-style: none;
@@ -469,7 +469,7 @@
   margin-bottom: 0.5rem;
 }
 .main .secciones .container .container_card .card .box .content p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.9rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
