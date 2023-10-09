@@ -69,6 +69,10 @@ footer .bottom-redes a:hover {
   border-radius: 5px;
   max-width: 350px;
 }
+.main .discord-bot .container .col.izq img:hover {
+  animation-name: hoverPop;
+  animation-duration: 0.4s;
+}
 .main .discord-bot .container .col.der {
   width: 55%;
   padding-left: 5%;
@@ -234,6 +238,15 @@ footer .bottom-redes a:hover {
 }
 .main .djpanas .curva-2 .shape-fill {
   fill: #141618;
+}
+@keyframes hoverPop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 @media all and (max-width: 1350px) {
   .main .discord-bot .funciones .cards {

@@ -92,6 +92,13 @@ footer{
 					object-fit: contain;
 					border-radius: 5px;
 					max-width: 350px;
+
+					&:hover{
+						animation-name: hoverPop;
+						animation-duration: .4s;
+					}
+
+
 				}
 			}
 			.col.der{
@@ -285,6 +292,18 @@ footer{
 		}
 	}
 }
+
+//Animaciones
+
+@keyframes hoverPop {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+}
+
 
 @media all and (max-width: 1350px){
 	.main .discord-bot .funciones .cards{
