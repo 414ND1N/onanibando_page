@@ -1,51 +1,41 @@
 /*COLORES*/
 /*FUENTES*/
-/*DARK MODE SWITCH*/
+:root {
+  --step--4: clamp(0.2469rem, 0.2265rem, 0.3013rem);
+  --step--3: clamp(0.3619rem, 0.3739rem, 0.3706rem);
+  --step--2: clamp(0.4338rem, 0.6013rem, 0.5556rem);
+  --step--1: clamp(0.5206rem, 0.9503rem, 0.8331rem);
+  --step-0: clamp(0.625rem, 1.4844rem, 1.25rem);
+  --step-1: clamp(0.75rem, 2.2969rem, 1.875rem);
+  --step-2: clamp(0.9rem, 3.5297rem, 2.8125rem);
+  --step-3: clamp(1.08rem, 5.3958rem, 4.2188rem);
+  --step-4: clamp(1.2963rem, 8.2151rem, 6.3281rem);
+  --step-5: clamp(1.555rem, 12.4691rem, 9.4925rem);
+}
 /*ESTILOS*/
-.main {
-  margin-top: 5.875rem;
+main {
+  margin-top: 5rem;
 }
-.main .portada {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/fondos/PORTADA_PARALLAX.png');
-  background-size: cover;
-  background-position: center;
-  object-fit: contain;
-  width: 100%;
-  height: 40vh;
-}
-.main .portada .logo {
-  height: auto;
-  width: 50%;
-  transition: 0.3s ease;
-  position: relative;
-  -transition: all 0.3s ease;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.main .tarjetas {
+main .tarjetas {
+  margin: 5rem 0;
   text-align: center;
-  margin: 5.875rem 0;
 }
-.main .tarjetas.darkmode .container .box .card {
+main .tarjetas.darkmode .container .box .card {
   background: white;
   box-shadow: 0 2px 10px rgba(20, 20, 20, 0.26);
 }
-.main .tarjetas.darkmode .container .box .card .imgBox {
+main .tarjetas.darkmode .container .box .card .imgBox {
   background: white;
 }
-.main .tarjetas.darkmode .container .box .card:before,
-.main .tarjetas.darkmode .container .box .card:after {
+main .tarjetas.darkmode .container .box .card:before,
+main .tarjetas.darkmode .container .box .card:after {
   background: white;
 }
-.main .tarjetas .titulo-seccion {
-  margin: 5rem;
-}
-.main .tarjetas .container {
+main .tarjetas .container {
   position: relative;
   z-index: 2;
 }
-.main .tarjetas .container .box {
+main .tarjetas .container .box {
   width: 100%;
   --columnas-panas: 3;
   display: grid;
@@ -53,7 +43,7 @@
   justify-items: center;
   grid-template-columns: repeat(var(--columnas-panas), 1fr);
 }
-.main .tarjetas .container .box .card {
+main .tarjetas .container .box .card {
   position: relative;
   min-width: 10.125rem;
   min-height: 11.25rem;
@@ -64,7 +54,7 @@
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.26);
   transition: 0.5s all ease;
 }
-.main .tarjetas .container .box .card img {
+main .tarjetas .container .box .card img {
   position: absolute;
   top: 0;
   left: 0;
@@ -73,7 +63,7 @@
   object-fit: cover;
   border-radius: 3px;
 }
-.main .tarjetas .container .box .card .imgBox {
+main .tarjetas .container .box .card .imgBox {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -83,8 +73,8 @@
   transition: 0.5s;
   z-index: 1;
 }
-.main .tarjetas .container .box .card:before,
-.main .tarjetas .container .box .card:after {
+main .tarjetas .container .box .card:before,
+main .tarjetas .container .box .card:after {
   content: "";
   position: absolute;
   top: 0;
@@ -96,18 +86,18 @@
   transition: 0.5s;
   z-index: -1;
 }
-.main .tarjetas .container .box .card:hover:before {
+main .tarjetas .container .box .card:hover:before {
   transform: rotate(20deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
-.main .tarjetas .container .box .card:hover:after {
+main .tarjetas .container .box .card:hover:after {
   transform: rotate(10deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
-.main .tarjetas .container .box .card:hover .imgBox {
+main .tarjetas .container .box .card:hover .imgBox {
   bottom: 70px;
 }
-.main .tarjetas .container .box .card .details {
+main .tarjetas .container .box .card .details {
   position: absolute;
   left: 1rem;
   right: 1rem;
@@ -115,60 +105,42 @@
   height: rem;
   text-align: center;
 }
-.main .tarjetas .container .box .card .details h2 {
+main .tarjetas .container .box .card .details h2 {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: var(--step-0);
   color: #777;
   text-transform: uppercase;
 }
-.main .tarjetas .container .box .card .details h2 span {
+main .tarjetas .container .box .card .details h2 span {
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: var(--step--1);
   color: #f38695;
   display: block;
 }
 @media all and (max-width: 1250px) {
-  .main .tarjetas .container .box {
+  main .tarjetas .container .box {
     --columnas-panas: 2;
   }
 }
 @media all and (max-width: 950px) {
-  .main .tarjetas .container .box {
+  main .tarjetas .container .box {
     --columnas-panas: 1;
   }
-  .main .portada {
-    height: 30vh;
-  }
-  .main .portada .logo {
-    width: 75%;
-  }
-  .main .tarjetas .container .box .card {
+  main .tarjetas .container .box .card {
     width: 28.8rem;
     height: 32rem;
   }
 }
-@media all and (max-width: 800px) {
-  .main .intro .container .video iframe {
-    height: 22.5rem;
-    width: 40rem;
-  }
-}
 @media all and (max-width: 700px) {
-  .main .tarjetas .container .box .card {
+  main .tarjetas .container .box .card {
     width: 22.5rem;
     height: 25rem;
   }
 }
 @media all and (max-width: 560px) {
-  .main .tarjetas .container .box .card {
+  main .tarjetas .container .box .card {
     width: 12.5rem;
     height: auto;
-  }
-}
-@media all and (max-width: 500px) {
-  .main .portada img {
-    height: 10rem;
-    width: auto;
   }
 }

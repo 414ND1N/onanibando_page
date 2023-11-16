@@ -1,11 +1,25 @@
-@negro-custom: #141618;	
+/*COLORES*/
+@negro-custom: #141618;
 @blanco: #fff;
-@texto-oscuro : #303133;
-@texto-claro : #777;
-@rojo: darkred;
 @gris-claro: #DFDFDE;
-@toffu_color: #da351f;
 @toffu_embed_color: #fe624c;
+@toffu_color: #da351f;
+
+@texto-claro : #eff6fb;
+@texto-oscuro : #040b10;
+@texto-gris : #777;
+
+@rojo_oscuro: darkred;
+@rojo_claro: rgb(189, 30, 30);
+
+@bg_claro: #fbfdfe;
+@bg_oscuro: #0c0c0c;
+
+@primary_claro: #cb7c43;
+@primary_oscuro: #bc6c34;
+
+@accent_claro: #a02c36;
+@accent_oscuro: #d35f69;
 
 /*FUENTES*/
 @fuente-principal: 'Nunito', sans-serif;
@@ -13,306 +27,327 @@
 @fuente-parrafo: 'Nunito', sans-serif;
 @fuente-titulo: 'PT Sans', serif;
 
-@light: #d8dbe0;
-@dark: #28292c;
-
 @toffu_img: '../img/panas/bot_toffu_nobg.png';
 
 /*ESTILOS*/
+// 280px -> 1240px
+:root {
+	--step--4: clamp(0.2469rem, 0.3171rem + -0.0906vw, 0.3013rem);
+	--step--3: clamp(0.3619rem, 0.3593rem + 0.0146vw, 0.3706rem);
+	--step--2: clamp(0.4338rem, 0.3982rem + 0.2031vw, 0.5556rem);
+	--step--1: clamp(0.5206rem, 0.4295rem + 0.5208vw, 0.8331rem);
+	--step-0: clamp(0.625rem, 0.4427rem + 1.0417vw, 1.25rem);
+	--step-1: clamp(0.75rem, 0.4219rem + 1.875vw, 1.875rem);
+	--step-2: clamp(0.9rem, 0.3422rem + 3.1875vw, 2.8125rem);
+	--step-3: clamp(1.08rem, 0.1645rem + 5.2313vw, 4.2188rem);
+	--step-4: clamp(1.2963rem, -0.1714rem + 8.3865vw, 6.3281rem);
+	--step-5: clamp(1.555rem, -0.7601rem + 13.2292vw, 9.4925rem);
+}
+main {
+	margin-top: 5rem;
+}
 
-footer{
-	background: black;
-	padding: 5rem 0;
-	text-align: center;
-	color: @blanco;
+// DISCORD EMDED
+main .discord-embed {
+	margin: 2rem 0;
 
-	.bottom-redes{
-		margin-top: 2.25rem;
-		a{
-			padding: 0 0.5625rem;
-			color: @blanco;
-			transition: all .3s ease;
+	.container {
+		position: relative;
+		text-align: center;
 
-			&:hover{
-				color: red;
+		.container-iframe {
+			margin: 2rem 1rem;
+
+			iframe {
+				width: 100%;
+				margin-bottom: 3rem;
 			}
 		}
 	}
+
 }
 
-.main{
-	margin-top: 5.875rem;
-	.discord-embed{
-		margin: 2rem 0;
-		.container{
-			position: relative;
-			text-align: center;
 
-			.container-iframe{
-				margin: 2rem 1rem;
-				iframe{
+// TOFFU
+main .discord-bot {
+	color: @blanco;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 30rem;
+	padding: 5.626rem 15vw;
+	width: 100%;
+	background: @negro-custom;
+
+	&.darkmode  {
+		.container .col.izq .fondo{
+			background-image: url("../img/panas/Toffu fondo noche.png");
+		}
+	}
+
+	.titulo-seccion h2 {
+		color: @blanco;
+		padding-bottom: 3rem;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 0 auto;
+
+		.col.izq {
+			width: 45%;
+			border-right: 1px solid @toffu_embed_color;
+			position: relative;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+			padding: 1rem;
+			
+			.fondo{
+				background-size: cover;
+				overflow: hidden;
+				position: relative;
+				background-image: url("../img/panas/Toffu fondo dia.png");
+
+				img {
 					width: 100%;
-					margin-bottom: 3rem;
+					height: 100%;
+					max-width: 350px;
+					&:hover {
+						animation-name: hoverPop;
+						animation-duration: .5s;
+					}
+				}
+			}
+
+		}
+
+		.col.der {
+			width: 55%;
+			padding-left: 5%;
+
+			.texto {
+				p {
+					margin: 3rem auto;
+					font-size: var(--step-0);
+					color: @blanco;
+					text-align: justify;
+					text-justify: inter-word;
 				}
 			}
 		}
-	
 	}
-	
-	.discord-bot{
-		color: @blanco;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		min-height: 30rem;
-		padding: 5.626rem 15vw;
+
+	.funciones {
+		color: black;
 		width: 100%;
-		background: @negro-custom;
-		
-		.titulo-seccion h2{
-			color:@blanco;
-			padding-bottom: 3rem;
-		}
-		
-		.container{
+		margin: 5rem 0;
+
+		.cards {
+			width: 100%;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
-
-			.col.izq{
-				width: 45%;
-				border-right: 1px solid @toffu_embed_color;
-				display: flex;
-				align-items:center;
-				padding-right: 5%;
-				img{
-					width: 100%;
-					height: 100%;
-					object-fit: contain;
-					border-radius: 5px;
-					max-width: 350px;
-
-					&:hover{
-						animation-name: hoverPop;
-						animation-duration: .4s;
-					}
-
-
-				}
-			}
-			.col.der{
-				width: 55%;
-				padding-left: 5%;
-				.texto{
-					p{
-						margin: 3rem auto;
-						font-size: clamp(1rem, 1rem, 1.75rem);
-						color: @blanco;
-						text-align: justify;
-						text-justify: inter-word;
-					}
-				}
-			}
+			gap: 3rem;
+			justify-content: space-evenly;
+			align-items: center;
 		}
-		.funciones{
-			color: black;
-			width: 100%;
-			margin: 5rem 0;
-			.cards{
-				width: 100%;
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				gap: 3rem;
-				justify-content: space-evenly;
-				align-items: center;
+
+		.cards {
+			.card .face2 .content.multi-3 {
+				column-count: 3;
+				column-gap: 10px;
 			}
 
-			.cards {
-				.card .face2 .content.multi-3{
-					column-count: 3;
-					column-gap: 10px;
-				}
-
-				.card .face2 .content.multi-2{
-					column-count: 2;
-					column-gap: 30px;
-				}
-	
-				.card{
-					position: relative;
-					cursor: pointer;
-				}
-				
-				.card .face{
-					width: 17rem;
-					height: 10rem;
-					transition: 0.5s;
-				}
-				
-				.card .face.face1{
-					position: relative;
-					background: #333;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					z-index: 1;
-					transform: translateY(3.75rem);
-				}
-				
-				.card:hover .face.face1{
-					background: @toffu_color;
-					transform: translateY(0);
-				}
-				
-				.card .face.face1 .content{
-					text-align: center;
-					opacity: 0.2;
-					transition: 0.5s;
-				}
-				
-				.card:hover .face.face1 .content{
-					opacity: 1;
-				}
-				
-				.card .face.face1 .content img{
-					max-width: 6.5rem;
-				}
-				
-				.card .face.face1 .content h3{
-					padding: 0;
-					color: #fff;
-					text-align: center;
-					font-size: 1.2em;
-				}
-				
-				.card .face.face2{
-					position: relative;
-					background: #fff;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					padding: 2rem;
-					box-sizing: border-box;
-					box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-					transform: translateY(-100px);
-				}
-				
-				.card:hover .face.face2{
-					transform: translateY(0);
-				}
-				
-				.card .face.face2 .content a,
-				.card .face.face2 .content li{
-					text-align: center;
-					list-style-type: none;
-					text-decoration: none;
-					font-weight: 500;
-					color: #333;
-					font-size: clamp(0.35rem, 0.8rem, 1.1rem);
-				}
-				
-				.card .face.face2 .content a:hover,
-				.card .face.face2 .content li:hover{
-					background: @toffu_embed_color;
-					color: #fff;
-					font-size: clamp(0.4rem, 0.8rem, 1.2rem);
-					transition: 0.5s;
-				}
+			.card .face2 .content.multi-2 {
+				column-count: 2;
+				column-gap: 30px;
 			}
-		}
-		.curva-1 {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			overflow: hidden;
-			line-height: 0;
-		}
-		.curva-1 svg {
-			position: relative;
-			display: block;
-			width: calc(100% + 1.3px);
-			height: 50px;
-		}
-		.curva-1 .shape-fill {
-			&.darkmode{
-				fill: @dark;
-			}
-			fill: @blanco;
-		}
-	}
-	/*DJPANAS*/
-	.djpanas{
-		padding: 5.626rem 0;
-		width: 100%;
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		min-height:6rem;
-		.container{
-			text-align: center;
-			justify-content: center;
 
-			.youtubePlayer{
-				align-items: center;
+			.card {
+				position: relative;
+				cursor: pointer;
+			}
+
+			.card .face {
+				width: 17rem;
+				height: 10rem;
+				transition: 0.5s;
+			}
+
+			.card .face.face1 {
+				position: relative;
+				background: #333;
 				display: flex;
 				justify-content: center;
-				iframe{
-					width: 32rem;
-					height: 18rem;
-					&:hover{
-						animation-name: hoverPop;
-						animation-duration: .4s;
-					}
-				}
+				align-items: center;
+				z-index: 1;
+				transform: translateY(3.75rem);
+			}
 
+			.card:hover .face.face1 {
+				background: @toffu_color;
+				transform: translateY(0);
+			}
+
+			.card .face.face1 .content {
+				text-align: center;
+				opacity: 0.2;
+				transition: 0.5s;
+			}
+
+			.card:hover .face.face1 .content {
+				opacity: 1;
+			}
+
+			.card .face.face1 .content img {
+				max-width: 6.5rem;
+			}
+
+			.card .face.face1 .content h3 {
+				padding: 0;
+				color: #fff;
+				text-align: center;
+				font-size: var(--step-0);
+			}
+
+			.card .face.face2 {
+				position: relative;
+				background: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 2rem;
+				box-sizing: border-box;
+				box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+				transform: translateY(-100px);
+			}
+
+			.card:hover .face.face2 {
+				transform: translateY(0);
+			}
+
+			.card .face.face2 .content a,
+			.card .face.face2 .content li {
+				text-align: center;
+				list-style-type: none;
+				text-decoration: none;
+				font-weight: 500;
+				color: #333;
+				font-size: var(--step--1);
+			}
+
+			.card .face.face2 .content a:hover,
+			.card .face.face2 .content li:hover {
+				background: @toffu_embed_color;
+				color: #fff;
+				font-size: var(--step-0);
+				transition: 0.5s;
 			}
 		}
+	}
 
-		.curva-2 {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			overflow: hidden;
-			line-height: 0;
+	.curva-1 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
+
+	.curva-1 svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 50px;
+	}
+
+	.curva-1 .shape-fill {
+		&.darkmode {
+			fill: @bg_oscuro;
 		}
-		.curva-2 svg {
-			position: relative;
-			display: block;
-			width: calc(100% + 1.3px);
-			height: 50px;
-			transform: rotateY(180deg);
-		}
-		.curva-2 .shape-fill {
-			fill: @negro-custom;
-		}
+
+		fill: @bg_claro;
 	}
 }
 
-//Animaciones
+
+// DJ PANAS
+main .djpanas {
+	padding: 5.626rem 0;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 6rem;
+
+	.container {
+		text-align: center;
+		justify-content: center;
+
+		.youtubePlayer {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			iframe {
+				width: 32rem;
+				height: 18rem;
+
+				&:hover {
+					animation-name: hoverPop;
+					animation-duration: .4s;
+				}
+			}
+
+		}
+	}
+
+	.curva-2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		line-height: 0;
+	}
+
+	.curva-2 svg {
+		position: relative;
+		display: block;
+		width: calc(100% + 1.3px);
+		height: 50px;
+		transform: rotateY(180deg);
+	}
+
+	.curva-2 .shape-fill {
+		fill: @negro-custom;
+	}
+}
+
+// Animaciones
 
 @keyframes hoverPop {
-	0%, 100% {
+	0%,100% {
 		transform: scale(1);
 	}
 	50% {
-		transform: scale(1.1);
+		transform: scale(1.2);
 	}
 }
 
 
-@media all and (max-width: 1350px){
-	.main .discord-bot .funciones .cards{
+@media all and (max-width: 1350px) {
+	main .discord-bot .funciones .cards {
 		gap: 1.75rem;
 	}
-}
 
-@media all and (max-width: 950px){
-	.main .discord-bot .container .col.izq{
+	main .discord-bot .container .col.izq {
 		width: 100%;
 		border-right: none;
 		border-bottom: none;
@@ -321,49 +356,36 @@ footer{
 		padding: 0;
 		margin-bottom: 2.25rem;
 	}
-	
-	.main .discord-bot .funciones .cards {
-		gap: 0;
-		flex-direction: column;
-		width: 100%;
-		.card{
-			width: 80%;
-			.face{
-				width: 100%;
-			}
-		}
-	}
-	.main .discord-bot .container .col.der{
+
+	main .discord-bot .container .col.der {
 		width: 100%;
 		padding: 0;
 		text-align: justify;
 	}
+
 }
 
-@media all and (max-width: 800px){
+@media all and (max-width: 950px) {
+	
+	main .discord-bot .funciones .cards {
+		gap: 0;
+		flex-direction: column;
+		width: 100%;
 
-	footer{
-		.bottom-redes{
-			margin-top: 1.25rem;
-			a{
-				padding: 0 0.5625rem;
-				color: @blanco;
-				transition: all .3s ease;
+		.card {
+			width: 80%;
 
-				&:hover{
-					color: red;
-				}
+			.face {
+				width: 100%;
 			}
 		}
 	}
+	
 }
 
-@media all and (max-width: 350px){
+@media all and (max-width: 350px) {
 
-	.main .discord-bot .funciones .cards .card .face.face2 .content{
-		column-count: 1;	
-	}
-	.main .discord-bot .funciones .cards .card .face.face2 .content li{
-		font-size: 0.7rem;	
+	main .discord-bot .funciones .cards .card .face.face2 .content {
+		column-count: 1;
 	}
 }

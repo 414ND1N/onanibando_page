@@ -1,0 +1,121 @@
+/*COLORES*/
+:root {
+  --step--4: clamp(0.2469rem, 0.2265rem, 0.3013rem);
+  --step--3: clamp(0.3619rem, 0.3739rem, 0.3706rem);
+  --step--2: clamp(0.4338rem, 0.6013rem, 0.5556rem);
+  --step--1: clamp(0.5206rem, 0.9503rem, 0.8331rem);
+  --step-0: clamp(0.625rem, 1.4844rem, 1.25rem);
+  --step-1: clamp(0.75rem, 2.2969rem, 1.875rem);
+  --step-2: clamp(0.9rem, 3.5297rem, 2.8125rem);
+  --step-3: clamp(1.08rem, 5.3958rem, 4.2188rem);
+  --step-4: clamp(1.2963rem, 8.2151rem, 6.3281rem);
+  --step-5: clamp(1.555rem, 12.4691rem, 9.4925rem);
+}
+/*NAVBAR*/
+header .menu-bar-pc {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  padding: 0 2.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #DFDFDE;
+  min-height: 5rem;
+}
+header .menu-bar-pc.darkmode {
+  background: #0c0c0c;
+}
+header .menu-bar-pc .logo {
+  max-width: 10rem;
+}
+header .menu-bar-pc .logo:hover {
+  animation: pop 1s ease;
+}
+header .menu-bar-pc .menu-principal a {
+  padding: 0 0.5625rem;
+  font-size: var(--step-0);
+}
+header .menu-bar-pc .top-redes a {
+  padding: 0 0.5625rem;
+}
+header .menu-bar-movil {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  padding: 0 2.25rem;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #DFDFDE;
+  min-height: 5.875rem;
+}
+header .menu-bar-movil.darkmode {
+  background: #0c0c0c;
+}
+header .menu-bar-movil.darkmode .slideMenu {
+  background: #0c0c0c;
+}
+header .menu-bar-movil .logo {
+  max-width: 10rem;
+}
+header .menu-bar-movil .logo:hover {
+  animation: pop 1s ease;
+}
+header .menu-bar-movil .burger-menu {
+  cursor: pointer;
+  font-size: var(--step-1);
+}
+header .menu-bar-movil .slideMenu {
+  position: fixed;
+  top: 5.875rem;
+  left: -80%;
+  background: #fff;
+  text-align: center;
+  padding: 1.25rem 2.25rem;
+  width: 80%;
+  transition: all 0.3s ease;
+}
+header .menu-bar-movil .slideMenu.active {
+  left: 0;
+}
+header .menu-bar-movil .slideMenu .top-redes {
+  margin-bottom: 0.625rem;
+}
+header .menu-bar-movil .slideMenu .top-redes a {
+  padding: 0 0.5625rem;
+}
+header .menu-bar-movil .slideMenu .menu-principal a {
+  display: block;
+  padding: 0.625rem 0;
+  border-top: 1px solid #DFDFDE;
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media all and (max-width: 800px) {
+  header .menu-bar-pc {
+    display: none;
+  }
+  header .menu-bar-movil {
+    display: flex;
+  }
+}

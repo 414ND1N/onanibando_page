@@ -1,0 +1,43 @@
+/*COLORES*/
+/*DARK MODE SWITCH*/
+:root {
+  --step--4: clamp(0.2469rem, 0.2265rem, 0.3013rem);
+  --step--3: clamp(0.3619rem, 0.3739rem, 0.3706rem);
+  --step--2: clamp(0.4338rem, 0.6013rem, 0.5556rem);
+  --step--1: clamp(0.5206rem, 0.9503rem, 0.8331rem);
+  --step-0: clamp(0.625rem, 1.4844rem, 1.25rem);
+  --step-1: clamp(0.75rem, 2.2969rem, 1.875rem);
+  --step-2: clamp(0.9rem, 3.5297rem, 2.8125rem);
+  --step-3: clamp(1.08rem, 5.3958rem, 4.2188rem);
+  --step-4: clamp(1.2963rem, 8.2151rem, 6.3281rem);
+  --step-5: clamp(1.555rem, 12.4691rem, 9.4925rem);
+}
+/*FOOTER*/
+footer {
+  z-index: 1;
+  position: relative;
+  background: black;
+  padding: 5.625rem 0;
+  text-align: center;
+  color: #fff;
+}
+footer a,
+footer p {
+  font-size: var(--step-0);
+}
+footer .bottom-redes {
+  margin-top: 2.25rem;
+}
+footer .bottom-redes a {
+  padding: 0 0.5625rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+footer .bottom-redes a:hover {
+  color: red;
+}
+@media all and (max-width: 800px) {
+  footer {
+    padding: 3rem 0;
+  }
+}

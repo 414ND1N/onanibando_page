@@ -1,42 +1,45 @@
 (function(){
 
 	const toggle = document.getElementById('input_toggle');
-	const body = document.querySelector('body');
-	const menu_bar_pc = document.getElementById('menu_bar_pc')
-	const menu_bar_movil = document.getElementById('menu_bar_movil')
 	const section_container_tarjetas = document.getElementsByClassName('tarjetas')
 
+	const elements = [
+		document.getElementById('menu_bar_pc'),
+		document.getElementById('menu_bar_movil')
+	]
+
 	// Verificar el estado almacenado en localStorage al cargar la página
-    const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
-    toggle.checked = darkModeEnabled;
-    validarInput(darkModeEnabled);
+    toggle.checked = localStorage.getItem('darkModeEnabled') === 'true';
+    validarInput(toggle.checked);
 
 	toggle.addEventListener('click', () => {
-		const darkModeEnabled = toggle.checked;
-        validarInput(darkModeEnabled);
+		validarInput(toggle.checked);
 
         // Guardar el estado en localStorage
-        localStorage.setItem('darkModeEnabled', darkModeEnabled);
+        localStorage.setItem('darkModeEnabled', toggle.checked);
 	});
 
+	// Funcion para validar el estado del input
 	function validarInput(darkModeEnabled){
+		// Dark mode
 		if(darkModeEnabled){
-			menu_bar_pc.className = 'menu-bar-pc darkmode'
-			menu_bar_movil.className = 'menu-bar-movil darkmode'
-			section_container_tarjetas[0].className = 'tarjetas darkmode'
-			section_container_tarjetas[1].className = 'tarjetas darkmode'
-			
-			body.style.backgroundColor = '#28292c'
-			body.style.color = 'white'
-		}else{
-			menu_bar_pc.className = 'menu-bar-pc'
-			menu_bar_movil.className = 'menu-bar-movil'
-			section_container_tarjetas[0].className = 'tarjetas'
-			section_container_tarjetas[1].className = 'tarjetas'
-
-			body.style.backgroundColor = 'white'
-			body.style.color = '#303133'
+			elements.forEach(element => {
+				if (element != null) {
+					element.classList.add('darkmode')
+				}
+			});
+			section_container_tarjetas[0].classList.add('darkmode')
+			section_container_tarjetas[1].classList.add('darkmode')
+			return
 		}
-	}
 
+		//Light mode
+		elements.forEach(element => {
+			if (element != null) {
+				element.classList.remove('darkmode')
+			}
+		});
+		section_container_tarjetas[0].classList.remove('darkmode')
+		section_container_tarjetas[1].classList.remove('darkmode')
+	}
 }())

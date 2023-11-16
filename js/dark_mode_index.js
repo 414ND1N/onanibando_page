@@ -1,51 +1,43 @@
 (function(){
 
 	const toggle = document.getElementById('input_toggle');
-	const body = document.querySelector('body');
-	const menu_bar_pc = document.getElementById('menu_bar_pc')
-	const menu_bar_movil = document.getElementById('menu_bar_movil')
-	const section_contacto = document.getElementById('contacto')
-	const section_panaserver = document.getElementById('panaserver')
-	const separadores = document.querySelectorAll('.shape-fill')
+	const elements = [
+		document.getElementById('menu_bar_pc'),
+		document.getElementById('menu_bar_movil'),
+		document.getElementById('nosotros'),
+		document.getElementById('contacto'),
+		document.getElementById('panaserver')
+	]
 
 	// Verificar el estado almacenado en localStorage al cargar la página
-    const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
-    toggle.checked = darkModeEnabled;
-    validarInput(darkModeEnabled);
+    toggle.checked = localStorage.getItem('darkModeEnabled') === 'true';
+    validarInput(toggle.checked);
 
 	toggle.addEventListener('click', () => {
-		const darkModeEnabled = toggle.checked;
-        validarInput(darkModeEnabled);
+        validarInput(toggle.checked);
 
         // Guardar el estado en localStorage
-        localStorage.setItem('darkModeEnabled', darkModeEnabled);
+        localStorage.setItem('darkModeEnabled', toggle.checked);
 	});
 
+	// Funcion para validar el estado del input
 	function validarInput(darkModeEnabled){
+		// Dark mode
 		if(darkModeEnabled){
-			separadores.forEach(element => {
-				element.setAttribute('class', 'shape-fill darkmode')
-				console.log('cambiando color del fill')
+			elements.forEach(element => {
+				if (element != null) {
+					element.classList.add('darkmode')
+				}
 			});
-			body.style.backgroundColor = '#28292c'
-			body.style.color = 'white'
-			menu_bar_pc.className = 'menu-bar-pc darkmode'
-			menu_bar_movil.className = 'menu-bar-movil darkmode'
-			section_contacto.className = 'contacto darkmode'
-			section_panaserver.className = 'panaserver darkmode'
-		}else{
-			separadores.forEach(element => {
-				element.setAttribute('class', 'shape-fill')
-			});
-			body.style.backgroundColor = 'white'
-			body.style.color = '#303133'
-			menu_bar_pc.className = 'menu-bar-pc'
-			menu_bar_movil.className = 'menu-bar-movil'
-			section_contacto.className = 'contacto'
-			section_panaserver.className = 'panaserver'
+			return
 		}
+
+		//Light mode
+		elements.forEach(element => {
+			if (element != null) {
+				element.classList.remove('darkmode')
+			}
+		});
 	}
-
-
 }())
 

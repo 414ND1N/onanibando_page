@@ -4,21 +4,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/discord.css">
-	
-	<link rel="icon" href="img/logos/Icono.png" type="img/Icono.png">
 
+	<!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/discord.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- PESTAÑA -->
+    <title>Discord</title>
+    <link rel="icon" href="img/logos/Icono.png" type="img/Icono.png">
+    
+    <!-- FUENTES -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&family=PT+Sans:ital@0;1&family=Quicksand&display=swap"
 		rel="stylesheet">
-	
-	<title>Discord</title>
 
-	<script src="https://kit.fontawesome.com/e63c20851b.js" crossorigin="anonymous"></script>
-
+    <!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/e63c20851b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -82,14 +87,15 @@
 	</header>
 
 
-	<section class="main">
+	<main>
 		<div class='toggle-switch'>
 			<label>
 				<input type='checkbox' id='input_toggle'>
 				<span class='slider'></span>
 			</label>
-		</div>
+		</div>	
 
+		<!-- EMBED DISCORD -->
 		<section class="discord-embed">
 			<div class="titulo-seccion">
 				<h2>SERVIDOR</h2>
@@ -104,13 +110,16 @@
 
 		</section>
 
+		<!-- TOFFU -->
 		<section class="discord-bot" id="discord-bot">
 			<div class="titulo-seccion">
 				<h2>TOFFU</h2>
 			</div>
 			<div class="container discord-info">
 				<div class="col izq">
-					<img src="img/panas/Toffu 3D.png" alt="" id="toffu_img">
+					<div class="fondo">
+						<img src="img/panas/Toffu V4 nb.png" alt="Imagen bot toffu" id="toffu_img" class="">
+					</div>
 				</div>
 				<div class="col der">
 					<div class="texto">
@@ -190,7 +199,6 @@
 									<li>8ball</li>
 									<li>accion</li>
 									<li>amiibo</li>
-									<li>buscaminas</li>
 									<li>decir</li>
 									<li>dogo</li>
 									<li>elegir</li>
@@ -222,7 +230,7 @@
 			</div>
 		</section>
 
-
+		<!-- DJ PANAS -->
 		<section class="djpanas" id="djpanas">
 			<div class="titulo-seccion">
 				<h2>DJ PANAS</h2>
@@ -255,7 +263,7 @@
 			</div>
 		</section>
 
-	</section>
+	</main>
 
 	<footer>
 		<p class="copyright">Todos los derechos reservados, jeje</p>
@@ -269,8 +277,12 @@
 			</a>
 		</div>
 	</footer>
+
+	<!-- JS -->
 	<script src="js/dark_mode_discord.js"></script>
+	<script src="js/dark_mode.js"></script>
 	<script src="js/menuMovil.js"></script>
+	<script src="js/toffu.js"></script>
 </body>
 
 </html>

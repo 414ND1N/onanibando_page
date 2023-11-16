@@ -1,10 +1,22 @@
 /*COLORES*/
-@negro-custom: #141618;	
 @blanco: #fff;
-@texto-oscuro : #303133;
-@texto-claro : #777;
-@rojo: darkred;
 @gris-claro: #DFDFDE;
+
+@texto-claro : #eff6fb;
+@texto-oscuro : #040b10;
+@texto-gris : #777;
+
+@rojo_oscuro: darkred;
+@rojo_claro: rgb(189, 30, 30);
+
+@bg_claro: #fbfdfe;
+@bg_oscuro: #0c0c0c;
+
+@primary_claro: #cb7c43;
+@primary_oscuro: #bc6c34;
+
+@accent_claro: #a02c36;
+@accent_oscuro: #d35f69;
 
 /*FUENTES*/
 @fuente-principal: 'Nunito', sans-serif;
@@ -12,39 +24,28 @@
 @fuente-parrafo: 'Nunito', sans-serif;
 @fuente-titulo: 'PT Sans', serif;
 
-@portada: '../img/fondos/PORTADA_PARALLAX.png';
-/*DARK MODE SWITCH*/
-@light: #d8dbe0;
-@dark: #28292c;
-
+// 280px -> 1240px
+:root {
+	--step--4: clamp(0.2469rem, 0.3171rem + -0.0906vw, 0.3013rem);
+	--step--3: clamp(0.3619rem, 0.3593rem + 0.0146vw, 0.3706rem);
+	--step--2: clamp(0.4338rem, 0.3982rem + 0.2031vw, 0.5556rem);
+	--step--1: clamp(0.5206rem, 0.4295rem + 0.5208vw, 0.8331rem);
+	--step-0: clamp(0.625rem, 0.4427rem + 1.0417vw, 1.25rem);
+	--step-1: clamp(0.75rem, 0.4219rem + 1.875vw, 1.875rem);
+	--step-2: clamp(0.9rem, 0.3422rem + 3.1875vw, 2.8125rem);
+	--step-3: clamp(1.08rem, 0.1645rem + 5.2313vw, 4.2188rem);
+	--step-4: clamp(1.2963rem, -0.1714rem + 8.3865vw, 6.3281rem);
+	--step-5: clamp(1.555rem, -0.7601rem + 13.2292vw, 9.4925rem);
+}
 
 /*ESTILOS*/
 
-.main{
-    margin-top: 5.875rem;
-    .portada{
-		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(@portada);
-        background-size: cover;
-        background-position: center;
-        object-fit: contain;
-        width: 100%;
-        height: 40vh;
-        .logo{
-            height: auto;
-            width: 50%;
-            transition: .3s ease;
-
-            position: relative;
-            -transition: all .3s ease;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
+main{
+    margin-top: 5rem;
 
     .tarjetas{
+        margin: 5rem 0;
 		text-align: center;
-        margin: 5.875rem 0;
 		&.darkmode{
 			.container .box{
 				.card{
@@ -60,9 +61,7 @@
 				}
 			}
 		}
-        .titulo-seccion{
-            margin: 5rem;
-        }
+        
         .container{
             position: relative;
             z-index: 2;
@@ -143,12 +142,12 @@
                     h2{
                         margin: 0;
                         padding: 0;
-                        font-size: 1rem;
+                        font-size: var(--step-0);
                         color: #777;
                         text-transform: uppercase;
                         span{
                             font-weight: 500;
-                            font-size: 0.9rem;
+                            font-size: var(--step--1);
                             color: #f38695;
                             display: block;
                         }
@@ -164,24 +163,18 @@
 
 @media all and (max-width: 1250px){
 
-    .main .tarjetas .container .box{
+    main .tarjetas .container .box{
         --columnas-panas: 2;
     }
 }
 
 @media all and (max-width: 950px){
 
-    .main .tarjetas .container .box{
+    main .tarjetas .container .box{
         --columnas-panas: 1;
     }
 
-    .main {
-		.portada{
-            height: 30vh;
-            .logo{
-                width: 75%;
-            }
-		}
+    main {
 		.tarjetas .container .box .card{
 			width: 28.8rem;
 			height: 32rem;
@@ -190,18 +183,9 @@
 	
 }
 
-@media all and (max-width: 800px){
-
-	.main .intro .container .video iframe{
-		height: 22.5rem;
-		width: 40rem;
-	}
-	
-}
-
 @media all and (max-width: 700px){
 
-    .main .tarjetas .container .box .card{
+    main .tarjetas .container .box .card{
         width: 22.5rem;
         height: 25rem;
     }
@@ -209,19 +193,9 @@
 
 @media all and (max-width: 560px){
 
-    .main .tarjetas .container .box .card{
+    main .tarjetas .container .box .card{
         width: 12.5rem;
         height: auto;
-    }
-	
-}
-
-@media all and (max-width: 500px){
-    .main .portada{
-        img{
-            height: 10rem;
-            width: auto;
-        }
     }
 	
 }

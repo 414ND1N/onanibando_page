@@ -2,6 +2,9 @@
 const contenidoMenu = document.getElementById('contenido_menu');
 const encabezadoMenu = document.getElementById('encabezado_menu');
 
+// Busqueda api
+const IP_SERVIDOR = 'PANA-SERVER.serv.nu';
+
 // Agregado contenido servidor
 let ipJava = '51.222.82.23:40361';
 let ipBedrock = '51.222.82.23'
@@ -46,7 +49,6 @@ function ContainerVacio(divContenido) {
 	divItem.appendChild(divItemRight);
 
 	divContenido.appendChild(divItem);
-	let primerHijo = contenidoMenu.firstElementChild;
 }
 
 function CoontainerMenuMinecraft(divMinecraft, ipJava, ipBedrock, portBedrock, versionJava, versionBedrock, playersOnline, playersMax) {
@@ -163,7 +165,7 @@ function CoontainerMenuMinecraft(divMinecraft, ipJava, ipBedrock, portBedrock, v
 function ActualizacionEstadoSeridor() {
 
 	// Realiza la solicitud a la API utilizando Fetch
-	fetch('https://api.mcsrvstat.us/2/PANA-SERVER.serv.nu')
+	fetch(`https://api.mcsrvstat.us/2/${IP_SERVIDOR}`)
 		.then(function (response) {
 			if (response.ok) {
 				return response.json(); // Obtener los datos en formato JSON
@@ -184,7 +186,7 @@ function ActualizacionEstadoSeridor() {
 				divMinecraft.innerHTML = '';
 
 				//Datos del servidor de minecraft obtenidos de la API
-				let ipJava = 'PANA-SERVER.serv.nu';
+				let ipJava = IP_SERVIDOR
 				let ipBedrock = data.ip;
 				let portBedrock = data.port;
 				let versionJava = data.version;

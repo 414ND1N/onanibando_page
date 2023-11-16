@@ -32,6 +32,7 @@ var metLightbox = {
      	propLightbox.cuerpoDom.appendChild(document.createElement('DIV')).setAttribute('id','lightbox_container');
 
      	propLightbox.lightbox_container = document.getElementById('lightbox_container')
+
      	propLightbox.lightbox_container.style.width = '100%'
      	propLightbox.lightbox_container.style.height = '100%'
      	propLightbox.lightbox_container.style.position = 'fixed'

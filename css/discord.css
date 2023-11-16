@@ -1,41 +1,36 @@
+/*COLORES*/
 /*FUENTES*/
 /*ESTILOS*/
-footer {
-  background: black;
-  padding: 5rem 0;
-  text-align: center;
-  color: #fff;
+:root {
+  --step--4: clamp(0.2469rem, 0.2265rem, 0.3013rem);
+  --step--3: clamp(0.3619rem, 0.3739rem, 0.3706rem);
+  --step--2: clamp(0.4338rem, 0.6013rem, 0.5556rem);
+  --step--1: clamp(0.5206rem, 0.9503rem, 0.8331rem);
+  --step-0: clamp(0.625rem, 1.4844rem, 1.25rem);
+  --step-1: clamp(0.75rem, 2.2969rem, 1.875rem);
+  --step-2: clamp(0.9rem, 3.5297rem, 2.8125rem);
+  --step-3: clamp(1.08rem, 5.3958rem, 4.2188rem);
+  --step-4: clamp(1.2963rem, 8.2151rem, 6.3281rem);
+  --step-5: clamp(1.555rem, 12.4691rem, 9.4925rem);
 }
-footer .bottom-redes {
-  margin-top: 2.25rem;
+main {
+  margin-top: 5rem;
 }
-footer .bottom-redes a {
-  padding: 0 0.5625rem;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-footer .bottom-redes a:hover {
-  color: red;
-}
-.main {
-  margin-top: 5.875rem;
-  /*DJPANAS*/
-}
-.main .discord-embed {
+main .discord-embed {
   margin: 2rem 0;
 }
-.main .discord-embed .container {
+main .discord-embed .container {
   position: relative;
   text-align: center;
 }
-.main .discord-embed .container .container-iframe {
+main .discord-embed .container .container-iframe {
   margin: 2rem 1rem;
 }
-.main .discord-embed .container .container-iframe iframe {
+main .discord-embed .container .container-iframe iframe {
   width: 100%;
   margin-bottom: 3rem;
 }
-.main .discord-bot {
+main .discord-bot {
   color: #fff;
   position: relative;
   display: flex;
@@ -46,50 +41,60 @@ footer .bottom-redes a:hover {
   width: 100%;
   background: #141618;
 }
-.main .discord-bot .titulo-seccion h2 {
+main .discord-bot.darkmode .container .col.izq .fondo {
+  background-image: url("../img/panas/Toffu fondo noche.png");
+}
+main .discord-bot .titulo-seccion h2 {
   color: #fff;
   padding-bottom: 3rem;
 }
-.main .discord-bot .container {
+main .discord-bot .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
-.main .discord-bot .container .col.izq {
+main .discord-bot .container .col.izq {
   width: 45%;
   border-right: 1px solid #fe624c;
-  display: flex;
+  position: relative;
   align-items: center;
-  padding-right: 5%;
+  justify-content: center;
+  display: flex;
+  padding: 1rem;
 }
-.main .discord-bot .container .col.izq img {
+main .discord-bot .container .col.izq .fondo {
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  background-image: url("../img/panas/Toffu fondo dia.png");
+}
+main .discord-bot .container .col.izq .fondo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 5px;
   max-width: 350px;
 }
-.main .discord-bot .container .col.izq img:hover {
+main .discord-bot .container .col.izq .fondo img:hover {
   animation-name: hoverPop;
-  animation-duration: 0.4s;
+  animation-duration: 0.5s;
 }
-.main .discord-bot .container .col.der {
+main .discord-bot .container .col.der {
   width: 55%;
   padding-left: 5%;
 }
-.main .discord-bot .container .col.der .texto p {
+main .discord-bot .container .col.der .texto p {
   margin: 3rem auto;
-  font-size: clamp(1rem, 1rem, 1.75rem);
+  font-size: var(--step-0);
   color: #fff;
   text-align: justify;
   text-justify: inter-word;
 }
-.main .discord-bot .funciones {
+main .discord-bot .funciones {
   color: black;
   width: 100%;
   margin: 5rem 0;
 }
-.main .discord-bot .funciones .cards {
+main .discord-bot .funciones .cards {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -98,24 +103,24 @@ footer .bottom-redes a:hover {
   justify-content: space-evenly;
   align-items: center;
 }
-.main .discord-bot .funciones .cards .card .face2 .content.multi-3 {
+main .discord-bot .funciones .cards .card .face2 .content.multi-3 {
   column-count: 3;
   column-gap: 10px;
 }
-.main .discord-bot .funciones .cards .card .face2 .content.multi-2 {
+main .discord-bot .funciones .cards .card .face2 .content.multi-2 {
   column-count: 2;
   column-gap: 30px;
 }
-.main .discord-bot .funciones .cards .card {
+main .discord-bot .funciones .cards .card {
   position: relative;
   cursor: pointer;
 }
-.main .discord-bot .funciones .cards .card .face {
+main .discord-bot .funciones .cards .card .face {
   width: 17rem;
   height: 10rem;
   transition: 0.5s;
 }
-.main .discord-bot .funciones .cards .card .face.face1 {
+main .discord-bot .funciones .cards .card .face.face1 {
   position: relative;
   background: #333;
   display: flex;
@@ -124,28 +129,28 @@ footer .bottom-redes a:hover {
   z-index: 1;
   transform: translateY(3.75rem);
 }
-.main .discord-bot .funciones .cards .card:hover .face.face1 {
+main .discord-bot .funciones .cards .card:hover .face.face1 {
   background: #da351f;
   transform: translateY(0);
 }
-.main .discord-bot .funciones .cards .card .face.face1 .content {
+main .discord-bot .funciones .cards .card .face.face1 .content {
   text-align: center;
   opacity: 0.2;
   transition: 0.5s;
 }
-.main .discord-bot .funciones .cards .card:hover .face.face1 .content {
+main .discord-bot .funciones .cards .card:hover .face.face1 .content {
   opacity: 1;
 }
-.main .discord-bot .funciones .cards .card .face.face1 .content img {
+main .discord-bot .funciones .cards .card .face.face1 .content img {
   max-width: 6.5rem;
 }
-.main .discord-bot .funciones .cards .card .face.face1 .content h3 {
+main .discord-bot .funciones .cards .card .face.face1 .content h3 {
   padding: 0;
   color: #fff;
   text-align: center;
-  font-size: 1.2em;
+  font-size: var(--step-0);
 }
-.main .discord-bot .funciones .cards .card .face.face2 {
+main .discord-bot .funciones .cards .card .face.face2 {
   position: relative;
   background: #fff;
   display: flex;
@@ -156,26 +161,26 @@ footer .bottom-redes a:hover {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   transform: translateY(-100px);
 }
-.main .discord-bot .funciones .cards .card:hover .face.face2 {
+main .discord-bot .funciones .cards .card:hover .face.face2 {
   transform: translateY(0);
 }
-.main .discord-bot .funciones .cards .card .face.face2 .content a,
-.main .discord-bot .funciones .cards .card .face.face2 .content li {
+main .discord-bot .funciones .cards .card .face.face2 .content a,
+main .discord-bot .funciones .cards .card .face.face2 .content li {
   text-align: center;
   list-style-type: none;
   text-decoration: none;
   font-weight: 500;
   color: #333;
-  font-size: clamp(0.35rem, 0.8rem, 1.1rem);
+  font-size: var(--step--1);
 }
-.main .discord-bot .funciones .cards .card .face.face2 .content a:hover,
-.main .discord-bot .funciones .cards .card .face.face2 .content li:hover {
+main .discord-bot .funciones .cards .card .face.face2 .content a:hover,
+main .discord-bot .funciones .cards .card .face.face2 .content li:hover {
   background: #fe624c;
   color: #fff;
-  font-size: clamp(0.4rem, 0.8rem, 1.2rem);
+  font-size: var(--step-0);
   transition: 0.5s;
 }
-.main .discord-bot .curva-1 {
+main .discord-bot .curva-1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -183,19 +188,19 @@ footer .bottom-redes a:hover {
   overflow: hidden;
   line-height: 0;
 }
-.main .discord-bot .curva-1 svg {
+main .discord-bot .curva-1 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 50px;
 }
-.main .discord-bot .curva-1 .shape-fill {
-  fill: #fff;
+main .discord-bot .curva-1 .shape-fill {
+  fill: #fbfdfe;
 }
-.main .discord-bot .curva-1 .shape-fill.darkmode {
-  fill: #28292c;
+main .discord-bot .curva-1 .shape-fill.darkmode {
+  fill: #0c0c0c;
 }
-.main .djpanas {
+main .djpanas {
   padding: 5.626rem 0;
   width: 100%;
   position: relative;
@@ -204,24 +209,24 @@ footer .bottom-redes a:hover {
   align-items: center;
   min-height: 6rem;
 }
-.main .djpanas .container {
+main .djpanas .container {
   text-align: center;
   justify-content: center;
 }
-.main .djpanas .container .youtubePlayer {
+main .djpanas .container .youtubePlayer {
   align-items: center;
   display: flex;
   justify-content: center;
 }
-.main .djpanas .container .youtubePlayer iframe {
+main .djpanas .container .youtubePlayer iframe {
   width: 32rem;
   height: 18rem;
 }
-.main .djpanas .container .youtubePlayer iframe:hover {
+main .djpanas .container .youtubePlayer iframe:hover {
   animation-name: hoverPop;
   animation-duration: 0.4s;
 }
-.main .djpanas .curva-2 {
+main .djpanas .curva-2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -229,14 +234,14 @@ footer .bottom-redes a:hover {
   overflow: hidden;
   line-height: 0;
 }
-.main .djpanas .curva-2 svg {
+main .djpanas .curva-2 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 50px;
   transform: rotateY(180deg);
 }
-.main .djpanas .curva-2 .shape-fill {
+main .djpanas .curva-2 .shape-fill {
   fill: #141618;
 }
 @keyframes hoverPop {
@@ -245,16 +250,14 @@ footer .bottom-redes a:hover {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 @media all and (max-width: 1350px) {
-  .main .discord-bot .funciones .cards {
+  main .discord-bot .funciones .cards {
     gap: 1.75rem;
   }
-}
-@media all and (max-width: 950px) {
-  .main .discord-bot .container .col.izq {
+  main .discord-bot .container .col.izq {
     width: 100%;
     border-right: none;
     border-bottom: none;
@@ -263,41 +266,27 @@ footer .bottom-redes a:hover {
     padding: 0;
     margin-bottom: 2.25rem;
   }
-  .main .discord-bot .funciones .cards {
-    gap: 0;
-    flex-direction: column;
-    width: 100%;
-  }
-  .main .discord-bot .funciones .cards .card {
-    width: 80%;
-  }
-  .main .discord-bot .funciones .cards .card .face {
-    width: 100%;
-  }
-  .main .discord-bot .container .col.der {
+  main .discord-bot .container .col.der {
     width: 100%;
     padding: 0;
     text-align: justify;
   }
 }
-@media all and (max-width: 800px) {
-  footer .bottom-redes {
-    margin-top: 1.25rem;
+@media all and (max-width: 950px) {
+  main .discord-bot .funciones .cards {
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
   }
-  footer .bottom-redes a {
-    padding: 0 0.5625rem;
-    color: #fff;
-    transition: all 0.3s ease;
+  main .discord-bot .funciones .cards .card {
+    width: 80%;
   }
-  footer .bottom-redes a:hover {
-    color: red;
+  main .discord-bot .funciones .cards .card .face {
+    width: 100%;
   }
 }
 @media all and (max-width: 350px) {
-  .main .discord-bot .funciones .cards .card .face.face2 .content {
+  main .discord-bot .funciones .cards .card .face.face2 .content {
     column-count: 1;
-  }
-  .main .discord-bot .funciones .cards .card .face.face2 .content li {
-    font-size: 0.7rem;
   }
 }
