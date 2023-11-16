@@ -17,24 +17,13 @@ footer {
   z-index: 1;
   position: relative;
   background: black;
-  padding: 5rem 0;
+  padding: 4rem 0;
   text-align: center;
   color: #fff;
 }
 footer a,
 footer p {
   font-size: 17px;
-}
-footer .bottom-redes {
-  margin-top: 2.25rem;
-}
-footer .bottom-redes a {
-  padding: 0 0.5625rem;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-footer .bottom-redes a:hover {
-  color: #bd1e1e;
 }
 @media all and (max-width: 800px) {
   footer {

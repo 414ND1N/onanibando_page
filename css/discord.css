@@ -182,7 +182,7 @@ main .discord-bot .funciones .cards .card .face.face2 .content a:hover,
 main .discord-bot .funciones .cards .card .face.face2 .content li:hover {
   background: #fe624c;
   color: #fff;
-  font-size: var(--step-0);
+  font-size: calc(var(--step--1)+0.5rem);
   transition: 0.5s;
 }
 main .discord-bot .curva-1 {
