@@ -13,7 +13,7 @@
 }
 /*NAVBAR*/
 header .menu-bar-pc {
-  background: #fff;
+  background: #fbfdfe;
   width: 100%;
   position: fixed;
   z-index: 99;
@@ -31,19 +31,29 @@ header .menu-bar-pc.darkmode {
 }
 header .menu-bar-pc .logo {
   max-width: 10rem;
+  height: auto;
 }
 header .menu-bar-pc .logo:hover {
-  animation: pop 1s ease;
+  animation: hoverPop 1s ease;
 }
 header .menu-bar-pc .menu-principal a {
   padding: 0 0.5625rem;
-  font-size: var(--step-0);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+header .menu-bar-pc .menu-principal a:hover {
+  color: #bd1e1e;
 }
 header .menu-bar-pc .top-redes a {
+  font-size: 16px;
   padding: 0 0.5625rem;
+  transition: all 0.3s ease;
+}
+header .menu-bar-pc .top-redes a:hover {
+  color: #bd1e1e;
 }
 header .menu-bar-movil {
-  background: #fff;
+  background: #fbfdfe;
   width: 100%;
   position: fixed;
   z-index: 99;
@@ -64,9 +74,10 @@ header .menu-bar-movil.darkmode .slideMenu {
 }
 header .menu-bar-movil .logo {
   max-width: 10rem;
+  height: auto;
 }
 header .menu-bar-movil .logo:hover {
-  animation: pop 1s ease;
+  animation: hoverPop 1s ease;
 }
 header .menu-bar-movil .burger-menu {
   cursor: pointer;
@@ -90,13 +101,21 @@ header .menu-bar-movil .slideMenu .top-redes {
 }
 header .menu-bar-movil .slideMenu .top-redes a {
   padding: 0 0.5625rem;
+  transition: all 0.3s ease;
+}
+header .menu-bar-movil .slideMenu .top-redes a:hover {
+  color: #bd1e1e;
 }
 header .menu-bar-movil .slideMenu .menu-principal a {
   display: block;
   padding: 0.625rem 0;
   border-top: 1px solid #DFDFDE;
+  transition: all 0.3s ease;
 }
-@keyframes pop {
+header .menu-bar-movil .slideMenu .menu-principal a:hover {
+  color: #bd1e1e;
+}
+@keyframes hoverPop {
   0% {
     transform: scale(1);
   }

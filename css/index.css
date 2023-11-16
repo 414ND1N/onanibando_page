@@ -122,6 +122,10 @@ main .nosotros .container .col.izq {
 main .nosotros .container .col.izq .titulo-seccion h2 {
   color: #bd1e1e;
   font-size: var(--step-2);
+  transition: all 0.2s ease;
+}
+main .nosotros .container .col.izq .titulo-seccion h2:hover {
+  color: #fff;
 }
 main .nosotros .container .col.der {
   width: 70%;

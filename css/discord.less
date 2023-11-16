@@ -76,7 +76,7 @@ main .discord-bot {
 	flex-direction: column;
 	align-items: center;
 	min-height: 30rem;
-	padding: 5.626rem 15vw;
+	padding: 5.626rem 10vw;
 	width: 100%;
 	background: @negro-custom;
 
@@ -95,15 +95,15 @@ main .discord-bot {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		margin: 0 auto;
+		container-type: inline-size;
 
 		.col.izq {
 			width: 45%;
 			border-right: 1px solid @toffu_embed_color;
 			position: relative;
 			align-items: center;
-			justify-content: center;
 			display: flex;
+			justify-content: center;
 			padding: 1rem;
 			
 			.fondo{
@@ -111,14 +111,15 @@ main .discord-bot {
 				overflow: hidden;
 				position: relative;
 				background-image: url("../img/panas/Toffu fondo dia.png");
-
+				
 				img {
 					width: 100%;
 					height: 100%;
 					max-width: 350px;
+					transition: all 1s ease;
 					&:hover {
-						animation-name: hoverPop;
-						animation-duration: .5s;
+						animation-name: hoverPopToffu;
+						animation-duration: .3s;
 					}
 				}
 			}
@@ -128,11 +129,11 @@ main .discord-bot {
 		.col.der {
 			width: 55%;
 			padding-left: 5%;
-
+			container-type: inline-size;
 			.texto {
 				p {
-					margin: 3rem auto;
-					font-size: var(--step-0);
+					margin: 4cqh auto;
+					font-size: 4cqi;
 					color: @blanco;
 					text-align: justify;
 					text-justify: inter-word;
@@ -144,27 +145,28 @@ main .discord-bot {
 	.funciones {
 		color: black;
 		width: 100%;
-		margin: 5rem 0;
-
+		margin: 3rem 0;
+		
 		.cards {
 			width: 100%;
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
-			gap: 3rem;
+			gap: 2rem;
 			justify-content: space-evenly;
 			align-items: center;
 		}
 
 		.cards {
+			container-type: inline-size;
 			.card .face2 .content.multi-3 {
 				column-count: 3;
-				column-gap: 10px;
+				column-gap: 1cqw;
 			}
 
 			.card .face2 .content.multi-2 {
 				column-count: 2;
-				column-gap: 30px;
+				column-gap: 3cqw;
 			}
 
 			.card {
@@ -278,7 +280,7 @@ main .discord-bot {
 
 // DJ PANAS
 main .djpanas {
-	padding: 5.626rem 0;
+	padding: 5rem 0;
 	width: 100%;
 	position: relative;
 	display: flex;
@@ -289,23 +291,6 @@ main .djpanas {
 	.container {
 		text-align: center;
 		justify-content: center;
-
-		.youtubePlayer {
-			align-items: center;
-			display: flex;
-			justify-content: center;
-
-			iframe {
-				width: 32rem;
-				height: 18rem;
-
-				&:hover {
-					animation-name: hoverPop;
-					animation-duration: .4s;
-				}
-			}
-
-		}
 	}
 
 	.curva-2 {
@@ -332,21 +317,23 @@ main .djpanas {
 
 // Animaciones
 
-@keyframes hoverPop {
+@keyframes hoverPopToffu {
 	0%,100% {
 		transform: scale(1);
 	}
 	50% {
-		transform: scale(1.2);
+		transform: scale(1.1);
 	}
 }
 
-
-@media all and (max-width: 1350px) {
-	main .discord-bot .funciones .cards {
-		gap: 1.75rem;
+@media all and (max-width: 950px) {
+	
+	main .discord-bot .container .col.der {
+		width: 100%;
+		padding: 0;
+		text-align: justify;
 	}
-
+	
 	main .discord-bot .container .col.izq {
 		width: 100%;
 		border-right: none;
@@ -357,16 +344,6 @@ main .djpanas {
 		margin-bottom: 2.25rem;
 	}
 
-	main .discord-bot .container .col.der {
-		width: 100%;
-		padding: 0;
-		text-align: justify;
-	}
-
-}
-
-@media all and (max-width: 950px) {
-	
 	main .discord-bot .funciones .cards {
 		gap: 0;
 		flex-direction: column;
