@@ -1,17 +1,5 @@
 /*COLORES*/
 /*FUENTES*/
-/*
-header {
-	.menu-bar-pc {
-		//quitar color de fondo
-		background-color: transparent;
-	}
-	.menu-bar-movil {
-		//quitar color de fondo
-		background-color: transparent;
-	}
-}
-*/
 :root {
   --step--4: clamp(0.2469rem, 0.2265rem, 0.3013rem);
   --step--3: clamp(0.3619rem, 0.3739rem, 0.3706rem);
@@ -63,6 +51,7 @@ main {
 .parallax .parallax_barra_arriba {
   z-index: 7;
   --parallax-speed: 10;
+  display: none;
 }
 .parallax .parallax_barra_bajo {
   z-index: 998;
@@ -142,7 +131,6 @@ main .juegos {
   background: #141618;
   padding: 5.626rem 0;
   position: relative;
-  z-index: 1;
 }
 main .juegos .container {
   display: flex;
@@ -204,7 +192,6 @@ main .juegos .container .col .slider .slide .overlay i {
 }
 main .panaserver {
   padding: 5.625rem 0;
-  z-index: 1;
 }
 main .panaserver.darkmode .container .container-menu .encabezado li a:hover {
   color: #bd1e1e;
@@ -510,12 +497,8 @@ main .secciones .curva-1 .shape-fill.darkmode {
 main .contacto.darkmode .datos {
   background-image: url("../img/fondos/FONDO_PARALLAX_2.jpg");
 }
-main .contacto.darkmode .datos .container .blurb h3 {
-  color: black;
-}
-main .contacto.darkmode .datos .container .blurb p {
-  color: black;
-}
+main .contacto.darkmode .datos .container .blurb h3,
+main .contacto.darkmode .datos .container .blurb p,
 main .contacto.darkmode .datos .container .blurb a {
   color: black;
 }

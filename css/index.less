@@ -25,18 +25,6 @@
 @fuente-parrafo: 'Nunito', sans-serif;
 @fuente-titulo: 'PT Sans', serif;
 
-/*
-header {
-	.menu-bar-pc {
-		//quitar color de fondo
-		background-color: transparent;
-	}
-	.menu-bar-movil {
-		//quitar color de fondo
-		background-color: transparent;
-	}
-}
-*/
 
 // 280px -> 1240px
 :root {
@@ -100,6 +88,7 @@ main {
 	.parallax_barra_arriba {
 		z-index: 7;
 		--parallax-speed: 10;
+		display: none;
 	}
 
 	.parallax_barra_bajo {
@@ -133,7 +122,7 @@ main {
 }
 
 
-main>section {
+main > section {
 	background: @bg_claro;
 	z-index: 1;
 	position: relative;
@@ -203,7 +192,6 @@ main .juegos {
 	background: @negro-custom;
 	padding: 5.626rem 0;
 	position: relative;
-	z-index: 1;
 
 	.container {
 		display: flex;
@@ -276,7 +264,6 @@ main .juegos {
 // Servidores
 main .panaserver {
 	padding: 5.625rem 0;
-	z-index: 1;
 
 	&.darkmode {
 		.container .container-menu {
@@ -664,18 +651,11 @@ main .secciones {
 
 // Contacto
 main .contacto {
-
 	&.darkmode {
 		.datos {
 			background-image: url("../img/fondos/FONDO_PARALLAX_2.jpg");
 			.container .blurb {
-				h3 {
-					color: black;
-				}
-				p {
-					color: black;
-				}
-				a {
+				h3, p, a {
 					color: black;
 				}
 			}
