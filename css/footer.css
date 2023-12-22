@@ -20,6 +20,7 @@ footer {
   padding: 4rem 0;
   text-align: center;
   color: #fff;
+  bottom: 0;
 }
 footer a,
 footer p {
