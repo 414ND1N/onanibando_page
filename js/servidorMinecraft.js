@@ -6,11 +6,11 @@ const encabezadoMenu = document.getElementById('encabezado_menu')
 const IP_SERVIDOR = 'PANA-SERVER.serv.nu'
 
 // Agregado contenido servidor
-let ipJava = '51.222.82.23:40361'
-let ipBedrock = '51.222.82.23'
-let portBedrock = '40361'
-let versionJava = '1.20'
-let versionBedrock = '1.20'
+let ipJava = '51.222.108.12:41774'
+let ipBedrock = '51.222.108.12'
+let portBedrock = '41774'
+let versionJava = '1.20.4'
+let versionBedrock = '1.20.*'
 
 //Funciones
 
@@ -177,37 +177,37 @@ function ActualizacionEstadoSeridor() {
 
 			//Div del servidor de minecraft
 			const divMinecraft = contenidoMenu.querySelector('#minecraft_panaland')
-
-
-			if (data.online) {
-				console.log("PANASERVER está online")
-
-				//Reinicio del div minecraft
-				divMinecraft.innerHTML = ''
-
-				//Datos del servidor de minecraft obtenidos de la API
-				let ipJava = IP_SERVIDOR
-				let ipBedrock = data.ip
-				let portBedrock = data.port
-				let versionJava = data.version
-				let versionBedrock = data.version
-
-				CoontainerMenuMinecraft(divMinecraft, ipJava, ipBedrock, portBedrock, versionJava, versionBedrock, data.players.online, data.players.max)
-				
-			}else{
-				console.log("PANASERVER está offline")
-
-				//Reinicio del div minecraft
-				divMinecraft.innerHTML = ''
-
-				//Agregado menu vacio
-				ContainerVacio(divMinecraft)
+			
+			if (divMinecraft != null) {
+				if (data.online)  {
+					console.log("PANASERVER está online")
+	
+					//Reinicio del div minecraft
+					divMinecraft.innerHTML = ''
+	
+					//Datos del servidor de minecraft obtenidos de la API
+					let ipJava = IP_SERVIDOR
+					let ipBedrock = data.ip
+					let portBedrock = data.port
+					let versionJava = data.version
+					let versionBedrock = data.version
+	
+					CoontainerMenuMinecraft(divMinecraft, ipJava, ipBedrock, portBedrock, versionJava, versionBedrock, data.players.online, data.players.max)
+					
+				} else{
+					console.log("PANASERVER está offline")
+	
+					//Reinicio del div minecraft
+					divMinecraft.innerHTML = ''
+	
+					//Agregado menu vacio
+					ContainerVacio(divMinecraft)
+				}
 			}
 		})
 		.catch(function (error) {
 			console.error(error)
 		})
-
 }
 
 ActualizacionEstadoSeridor()
