@@ -37,6 +37,9 @@ body {
   color: #040b10;
   overflow-x: hidden;
 }
+main {
+  width: 100%;
+}
 .container {
   width: 95%;
   max-width: 1080px;

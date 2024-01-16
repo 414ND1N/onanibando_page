@@ -209,7 +209,7 @@ main .panaserver .container .container-menu {
 main .panaserver .container .container-menu .encabezado {
   font-weight: 600;
   font-family: 'Quicksand', sans-serif;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
   text-transform: upppercase;
   list-style: none;
   display: flex;
@@ -636,5 +636,8 @@ main .contacto .datos p {
   }
   main .juegos .container .col .slider .slide {
     min-height: auto;
+  }
+  main .panaserver .container .container-menu .encabezado li a {
+    font-size: var(--step--1);
   }
 }
