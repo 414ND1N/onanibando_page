@@ -6,10 +6,10 @@ const encabezadoMenu = document.getElementById('encabezado_menu')
 const IP_SERVIDOR = 'PANA-SERVER.serv.nu'
 
 // Agregado contenido servidor
-let ipJava = '51.222.108.12:41774'
-let ipBedrock = '51.222.108.12'
-let portBedrock = '41774'
-let versionJava = '1.20.4'
+let ipJava = ''
+let ipBedrock = ''
+let portBedrock = ''
+let versionJava = '1.20.6'
 let versionBedrock = '1.20.*'
 
 //Funciones
@@ -144,7 +144,7 @@ function CoontainerMenuMinecraft(divMinecraft, ipJava, ipBedrock, portBedrock, v
 	const divApoyo = document.createElement('div')
 	divApoyo.classList.add('boton_apoyo')
 	const aApoyo = document.createElement('a')
-	aApoyo.href = 'https://server.pro/server/20458930'
+	aApoyo.href = 'https://server.pro/server/28183826'
 	aApoyo.target = '_blank'
 	aApoyo.type = 'button'
 	aApoyo.style = '--clr:#ed2121'
